@@ -1,4 +1,4 @@
-import React, { FC, useState } from "react";
+import React, { FC, useEffect, useState } from "react";
 // import Hero from "../Hero/Hero";
 import Jobs from "../components/Jobs/Jobs";
 import { Tabs, TabList, TabPanels, Tab, TabPanel, Box } from "@chakra-ui/react";
@@ -6,19 +6,26 @@ import Search from "../components/Search/Search";
 import { GetStaticProps } from "next";
 import JobCard from "@/components/JobCard/JobCard";
 import { Job } from "types/Job";
+import groupBy from "lodash/groupBy";
+import { JobTypeName } from "types/JobType";
 
 type JobsProps = {
   jobs: Array<Job>;
 };
 
 const Home: FC<JobsProps> = ({ jobs }: JobsProps) => {
-  const [categoryIndex, setCategoryIndex] = useState<number>(1);
+  const [categoryIndex, setCategoryIndex] = useState<number>(0);
+  const [categorizedJobs, setCategorizedJobs] = useState<{ [key: number]: Job[] }>();
 
   const handleTabsChange = (tabIndex: number) => {
     if (tabIndex !== categoryIndex) {
       setCategoryIndex(tabIndex);
     }
   };
+
+  useEffect(() => {
+    setCategorizedJobs(groupBy(jobs, "JobTypeId"));
+  }, []);
 
   return (
     <>
@@ -30,20 +37,67 @@ const Home: FC<JobsProps> = ({ jobs }: JobsProps) => {
         <Box mt="2">
           <Tabs index={categoryIndex} variant="enclosed" onChange={handleTabsChange}>
             <TabList>
-              {/* <Tab>All Jobs</Tab> */}
-              <Tab>Full-time</Tab>
-              <Tab>Part-time</Tab>
+              <Tab>Todos los Empleos</Tab>
+              <Tab>Tiempo Completo</Tab>
+              <Tab>Medio Tiempo</Tab>
               <Tab>Freelance</Tab>
-              <Tab>Temporary</Tab>
-              <Tab>Intership</Tab>
-              <Tab>Remote</Tab>
+              <Tab>Temporal</Tab>
+              <Tab>Pasantía</Tab>
+              <Tab>Remoto</Tab>
             </TabList>
             <TabPanels>
-              <TabPanel pl="0" pr="0" pb="2">
-                <JobCard job={jobs[0]} />
+              <TabPanel pt="5" pl="0" pr="0" pb="2">
+                {jobs.map((job: Job) => (
+                  <Box mb="5" key={job.Id}>
+                    <JobCard job={job} />
+                  </Box>
+                ))}
               </TabPanel>
-              <TabPanel pl="0" pr="0" pb="2">
-                <JobCard job={jobs[0]} />
+              <TabPanel pt="5" pl="0" pr="0" pb="2">
+                {categorizedJobs?.[JobTypeName.FULL_TIME]?.map((job: Job) => (
+                  <Box mb="5" key={job.Id}>
+                    <JobCard job={job} />
+                  </Box>
+                ))}
+              </TabPanel>
+              <TabPanel pt="5" pl="0" pr="0" pb="2">
+                {categorizedJobs?.[JobTypeName.PART_TIME]?.map((job: Job) => (
+                  <Box mb="5" key={job.Id}>
+                    <JobCard job={job} />
+                  </Box>
+                ))}
+              </TabPanel>
+              <TabPanel pt="5" pl="0" pr="0" pb="2">
+                {categorizedJobs?.[JobTypeName.FREELANCE]?.map((job: Job) => (
+                  <Box mb="5" key={job.Id}>
+                    <JobCard job={job} />
+                  </Box>
+                ))}
+              </TabPanel>
+              <TabPanel pt="5" pl="0" pr="0" pb="2">
+                {categorizedJobs?.[JobTypeName.TEMPORARY]?.map((job: Job) => (
+                  <Box mb="5" key={job.Id}>
+                    <JobCard job={job} />
+                  </Box>
+                ))}
+              </TabPanel>
+              <TabPanel pt="5" pl="0" pr="0" pb="2">
+                {categorizedJobs?.[JobTypeName.INTERNSHIPS]?.map((job: Job) => (
+                  <Box mb="5" key={job.Id}>
+                    <JobCard job={job} />
+                  </Box>
+                ))}
+              </TabPanel>
+              <TabPanel pt="5" pl="0" pr="0" pb="2">
+                {jobs.map((job: Job) => {
+                  return (
+                    (job.IsRemote || job.IsRemoteOnly) && (
+                      <Box mb="5" key={job.Id}>
+                        <JobCard job={job} />
+                      </Box>
+                    )
+                  );
+                })}
               </TabPanel>
             </TabPanels>
           </Tabs>

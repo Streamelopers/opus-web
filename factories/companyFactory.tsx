@@ -1,4 +1,4 @@
-import faker from "faker";
+import faker from "faker/locale/es_MX";
 import commonFieldsFactory from "./commonFieldsFactory";
 
 export default (id: number) => {
@@ -9,6 +9,6 @@ export default (id: number) => {
     Description: faker.random.words(45),
     UserId: faker.random.number(250),
     // TODO: Remove this fields
-    Picture: faker.image.business(500, 500)
+    Picture: `${faker.image.business(500, 500)}?uuid=${faker.random.uuid()}`
   };
 };

@@ -15,11 +15,11 @@ const Search = () => {
   return (
     <Box mt="2">
       <InputGroup size="md">
-        <Input pr="4.5rem" type="text" placeholder="Keywords, location, job type..." />
+        <Input pr="4.5rem" type="text" placeholder="Palabras clave, ubicación, tipo de trabajo..." />
         <Button ml="2" outline="0 !important" colorScheme="blue" isLoading={isLoading} onClick={handleSearch}>
           <Flex alignItems="center">
             <Icon as={FaSearch} mr="1" />
-            Search!
+            Buscar
           </Flex>
         </Button>
       </InputGroup>

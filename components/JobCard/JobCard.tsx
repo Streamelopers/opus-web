@@ -29,11 +29,11 @@ const JobCard: FC<JobsCardProps> = ({ job }: JobsCardProps) => {
 
   const getRemoteBadge = () => {
     if (job.IsRemote) {
-      return <Badge colorScheme="green">Remote Allowed!</Badge>;
+      return <Badge colorScheme="yellow">Se permite remoto</Badge>;
     }
 
     if (job.IsRemoteOnly) {
-      return <Badge colorScheme="green">Remote!</Badge>;
+      return <Badge colorScheme="green">Remoto</Badge>;
     }
   };
 
@@ -72,7 +72,7 @@ const JobCard: FC<JobsCardProps> = ({ job }: JobsCardProps) => {
             </Link>
           </NextLink>
           <Text display="flex" alignItems="center">
-            at&nbsp;
+            en&nbsp;
             <Icon as={FaBuilding} />
             <Text ml="1" mr="1" as="strong">
               {job.Company.Name}

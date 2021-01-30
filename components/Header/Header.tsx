@@ -25,9 +25,9 @@ const Header = () => {
           </NavLink>
         </Flex>
         <Box>
-          <NavLink href="/">Home</NavLink>
-          <NavLink href="/about">About</NavLink>
-          <NavLink href="/contact">Contact</NavLink>
+          <NavLink href="/">Inicio</NavLink>
+          <NavLink href="/nosotros">Sobre nosotros</NavLink>
+          <NavLink href="/contacto">Contacto</NavLink>
         </Box>
       </Flex>
     </Container>
