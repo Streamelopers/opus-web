@@ -1,58 +1,67 @@
-import Head from "next/head";
-import styles from "../styles/Home.module.css";
+import React, { FC, useState } from "react";
+// import Hero from "../Hero/Hero";
+import Jobs from "../components/Jobs/Jobs";
+import { Tabs, TabList, TabPanels, Tab, TabPanel, Box } from "@chakra-ui/react";
+import Search from "../components/Search/Search";
+import { GetStaticProps } from "next";
+import JobCard from "@/components/JobCard/JobCard";
+import { Job } from "types/Job";
 
-export default function Home() {
+type JobsProps = {
+  jobs: Array<Job>;
+};
+
+const Home: FC<JobsProps> = ({ jobs }: JobsProps) => {
+  const [categoryIndex, setCategoryIndex] = useState<number>(1);
+
+  const handleTabsChange = (tabIndex: number) => {
+    if (tabIndex !== categoryIndex) {
+      setCategoryIndex(tabIndex);
+    }
+  };
+
   return (
-    <div className={styles.container}>
-      <Head>
-        <title>Create Next App</title>
-        <link rel="icon" href="/favicon.ico" />
-      </Head>
+    <>
+      <div className="home-container container">
+        <div className="hero">{/* <Hero /> */}</div>
 
-      <main className={styles.main}>
-        <h1 className={styles.title}>
-          Welcome to <a href="https://nextjs.org">Next.js!</a>
-        </h1>
+        <Search />
 
-        <p className={styles.description}>
-          Get started by editing <code className={styles.code}>pages/index.js</code>
-        </p>
-
-        <div className={styles.grid}>
-          <a href="https://nextjs.org/docs" className={styles.card}>
-            <h3>Documentation &rarr;</h3>
-            <p>Find in-depth information about Next.js features and API.</p>
-          </a>
-
-          <a href="https://nextjs.org/learn" className={styles.card}>
-            <h3>Learn &rarr;</h3>
-            <p>Learn about Next.js in an interactive course with quizzes!</p>
-          </a>
-
-          <a href="https://github.com/vercel/next.js/tree/master/examples" className={styles.card}>
-            <h3>Examples &rarr;</h3>
-            <p>Discover and deploy boilerplate example Next.js projects.</p>
-          </a>
-
-          <a
-            href="https://vercel.com/import?filter=next.js&utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
-            className={styles.card}
-          >
-            <h3>Deploy &rarr;</h3>
-            <p>Instantly deploy your Next.js site to a public URL with Vercel.</p>
-          </a>
-        </div>
-      </main>
-
-      <footer className={styles.footer}>
-        <a
-          href="https://vercel.com?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Powered by <img src="/vercel.svg" alt="Vercel Logo" className={styles.logo} />
-        </a>
-      </footer>
-    </div>
+        <Box mt="2">
+          <Tabs index={categoryIndex} variant="enclosed" onChange={handleTabsChange}>
+            <TabList>
+              {/* <Tab>All Jobs</Tab> */}
+              <Tab>Full-time</Tab>
+              <Tab>Part-time</Tab>
+              <Tab>Freelance</Tab>
+              <Tab>Temporary</Tab>
+              <Tab>Intership</Tab>
+              <Tab>Remote</Tab>
+            </TabList>
+            <TabPanels>
+              <TabPanel pl="0" pr="0" pb="2">
+                <JobCard job={jobs[0]} />
+              </TabPanel>
+              <TabPanel pl="0" pr="0" pb="2">
+                <JobCard job={jobs[0]} />
+              </TabPanel>
+            </TabPanels>
+          </Tabs>
+        </Box>
+      </div>
+    </>
   );
-}
+};
+
+export const getStaticProps: GetStaticProps = async () => {
+  const { API_URL } = process.env;
+  const response = await fetch(`${API_URL}/jobs`);
+  const jobs = await response.json();
+  return {
+    props: {
+      jobs
+    }
+  };
+};
+
+export default Home;

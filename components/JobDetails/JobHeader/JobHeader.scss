@@ -1,0 +1,23 @@
+.job-header {
+  display: flex;
+  align-items: center;
+  padding-top: 30px;
+  padding-bottom: 30px;
+
+  .company-logo {
+    img {
+      width: 75px;
+      margin-right: 15px;
+    }
+  }
+
+  .company-details {
+    h2 {
+      margin: 0;
+    }
+
+    span {
+      margin-right: 3px;
+    }
+  }
+}
