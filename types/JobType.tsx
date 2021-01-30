@@ -6,3 +6,12 @@ export interface JobType {
   IsActive: boolean;
   Name: string;
 }
+
+export enum JobTypeName {
+  FULL_TIME = 1,
+  PART_TIME,
+  FREELANCE,
+  TEMPORARY,
+  INTERNSHIPS,
+  REMOTO
+}
