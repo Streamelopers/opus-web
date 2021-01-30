@@ -3,14 +3,6 @@ import NextLink from "next/link";
 import { Box, Flex, Image, Link, Container } from "@chakra-ui/react";
 
 const Header = () => {
-  const NavLink = ({ children, ...props }) => (
-    <NextLink href={props.href}>
-      <Link px={8} color="white" {...props} cursor="pointer">
-        {children}
-      </Link>
-    </NextLink>
-  );
-
   return (
     <Container maxW="xl">
       <Flex bg="#63B3ED" px={40} py={4} justifyContent="space-between" alignItems="center">
@@ -20,14 +12,28 @@ const Header = () => {
             htmlHeight="50"
             htmlWidth="50"
           />
-          <NavLink href="/" pl={3} color="white">
-            Opus
-          </NavLink>
+          <NextLink href="/">
+            <Link px={8} color="white" cursor="pointer">
+              Opus
+            </Link>
+          </NextLink>
         </Flex>
         <Box>
-          <NavLink href="/">Inicio</NavLink>
-          <NavLink href="/nosotros">Sobre nosotros</NavLink>
-          <NavLink href="/contacto">Contacto</NavLink>
+          <NextLink href="/">
+            <Link px={8} color="white" cursor="pointer">
+              Inicio
+            </Link>
+          </NextLink>
+          <NextLink href="/iniciar-sesion">
+            <Link px={8} color="white" cursor="pointer">
+              Iniciar sesión
+            </Link>
+          </NextLink>
+          <NextLink href="/registro">
+            <Link px={8} color="white" cursor="pointer">
+              Registrarse
+            </Link>
+          </NextLink>
         </Box>
       </Flex>
     </Container>
