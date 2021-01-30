@@ -1,6 +1,5 @@
 import React, { FC, useEffect, useState } from "react";
 // import Hero from "../Hero/Hero";
-import Jobs from "../components/Jobs/Jobs";
 import { Tabs, TabList, TabPanels, Tab, TabPanel, Box } from "@chakra-ui/react";
 import Search from "../components/Search/Search";
 import { GetStaticProps } from "next";
@@ -16,9 +15,6 @@ type JobsProps = {
 const Home: FC<JobsProps> = ({ jobs }: JobsProps) => {
   const [categoryIndex, setCategoryIndex] = useState<number>(0);
   const [categorizedJobs, setCategorizedJobs] = useState<{ [key: number]: Job[] }>();
-
-  const a = 23;
-  a = 5;
 
   const handleTabsChange = (tabIndex: number) => {
     if (tabIndex !== categoryIndex) {
