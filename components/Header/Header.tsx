@@ -1,86 +1,36 @@
-import { useState } from "react";
-import Link from "next/link";
+import React from "react";
+import NextLink from "next/link";
+import { Box, Flex, Image, Link, Container } from "@chakra-ui/react";
 
 const Header = () => {
-  const [isOpen, setIsOpen] = useState(false);
+  const NavLink = ({ children, ...props }) => (
+    <NextLink href={props.href}>
+      <Link px={8} color="white" {...props} cursor="pointer">
+        {children}
+      </Link>
+    </NextLink>
+  );
+
   return (
-    <div className="nav-container">
-      <nav className="navbar navbar-expand-lg navbar-light bg-light">
-        <a className="navbar-brand" href="#">
-          Navbar
-        </a>
-        <button
-          className="navbar-toggler"
-          type="button"
-          data-toggle="collapse"
-          data-target="#navbarNav"
-          aria-controls="navbarNav"
-          aria-expanded="false"
-          aria-label="Toggle navigation"
-        >
-          <span className="navbar-toggler-icon"></span>
-        </button>
-        <div className="collapse navbar-collapse" id="navbarNav">
-          <ul className="navbar-nav">
-            <li className="nav-item active">
-              <a className="nav-link" href="#">
-                Home <span className="sr-only">(current)</span>
-              </a>
-            </li>
-            <li className="nav-item">
-              <a className="nav-link" href="#">
-                Features
-              </a>
-            </li>
-            <li className="nav-item">
-              <a className="nav-link" href="#">
-                Pricing
-              </a>
-            </li>
-            <li className="nav-item">
-              <a className="nav-link disabled" href="#">
-                Disabled
-              </a>
-            </li>
-          </ul>
-        </div>
-      </nav>
-    </div>
-    // <div className="header-container">
-    //   <nav className="navbar navbar-expand-lg navbar-light bg-light sticky-top">
-    //     <Link href="/">
-    //       <a className="navbar-brand">Opus</a>
-    //     </Link>
-    //     <button
-    //       onClick={() => setIsOpen(!isOpen)}
-    //       className="navbar-toggler"
-    //       type="button"
-    //       data-toggle="collapse"
-    //       data-target="#navbarSupportedContent"
-    //     >
-    //       <span className="navbar-toggler-icon" />
-    //     </button>
-    //     <div className={`collapse navbar-collapse ${isOpen && "show"}`} id="navbarSupportedContent">
-    //       <ul className="navbar-nav mr-auto">
-    //         <li className="nav-item">
-    //           <Link href="/login">
-    //             <a className="nav-link">Post a Job</a>
-    //           </Link>
-    //         </li>
-    //         <li className="nav-item">
-    //           <Link href="/login">
-    //             <a className="nav-link">Login</a>
-    //           </Link>
-    //         </li>
-    //         <li className="nav-item">
-    //           <Link href="/register">
-    //             <a className="nav-link">Register</a>
-    //           </Link>
-    //         </li>
-    //       </ul>
-    //     </div>
-    //   </nav>
-    // </div>
+    <Container maxW="xl">
+      <Flex bg="#63B3ED" px={40} py={4} justifyContent="space-between" alignItems="center">
+        <Flex flexDirection="row" justifyContent="center" alignItems="center">
+          <Image
+            src="https://upload.wikimedia.org/wikipedia/commons/a/ab/Android_O_Preview_Logo.png"
+            htmlHeight="50"
+            htmlWidth="50"
+          />
+          <NavLink href="/" pl={3} color="white">
+            Opus
+          </NavLink>
+        </Flex>
+        <Box>
+          <NavLink href="/">Home</NavLink>
+          <NavLink href="/about">About</NavLink>
+          <NavLink href="/contact">Contact</NavLink>
+        </Box>
+      </Flex>
+    </Container>
   );
 };
 export default Header;

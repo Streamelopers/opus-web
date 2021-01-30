@@ -1,0 +1,86 @@
+{
+  "Id": 70,
+  "CreatedAt": "2020-02-25T21:21:14.213Z",
+  "UpdatedAt": "2021-01-29T09:39:02.428Z",
+  "DeletedAt": null,
+  "IsActive": true,
+  "LocationId": 190,
+  "Location": {
+    "Id": 190,
+    "CreatedAt": "2020-10-12T04:08:08.131Z",
+    "UpdatedAt": "2021-01-28T20:24:01.921Z",
+    "DeletedAt": null,
+    "IsActive": true,
+    "Name": "perspiciatis",
+    "Latitude": 40828.29,
+    "Longitude": 29341.7
+  },
+  "CompanyId": 50,
+  "Company": {
+    "Id": 50,
+    "CreatedAt": "2020-12-10T08:06:04.323Z",
+    "UpdatedAt": "2021-01-28T15:51:21.330Z",
+    "DeletedAt": null,
+    "IsActive": true,
+    "Name": "rem",
+    "Website": "http://clark.org",
+    "Description": "Temporibus enim autem. Voluptatibus nam et autem sunt quo quidem quam. Dolorem rerum quis. Illo dolorem quis ipsa tenetur omnis nisi sed minima. Aut voluptate aut placeat distinctio explicabo iusto nisi aperiam. Eos quidem cum eius ut debitis id.\n \rMinus aut expedita atque non reiciendis corporis autem et inventore. Doloremque dolores quia saepe earum accusamus consequuntur facilis eos. Voluptates dignissimos ex dolore amet quasi. Omnis sunt porro aut ut ex. Vitae placeat perferendis est.\n \rQuia nesciunt eum. Soluta est voluptatem eveniet veniam et aut provident officia. Nobis accusantium voluptatem et. Laudantium vitae quo. Dolor et ut.",
+    "UserId": 220,
+    "Picture": "https://picsum.photos/200"
+  },
+  "UserId": 21,
+  "User": {
+    "Id": 21,
+    "CreatedAt": "2021-01-04T04:39:38.758Z",
+    "UpdatedAt": "2021-01-29T11:26:58.577Z",
+    "DeletedAt": null,
+    "IsActive": true,
+    "Name": "et",
+    "Email": "Hillary_Wehner65@hotmail.com",
+    "Password": "lcLqNw41rO9HqzJ"
+  },
+  "CurrencyId": 1,
+  "Currency": {
+    "Id": 1,
+    "CreatedAt": "2020-02-29T00:25:06.956Z",
+    "UpdatedAt": "2021-01-28T20:37:28.605Z",
+    "DeletedAt": null,
+    "IsActive": true,
+    "Name": "commodi sunt",
+    "Symbol": "eius",
+    "ISOCode": "vitae"
+  },
+  "PaymentTypeId": 2,
+  "PaymentType": {
+    "Id": 2,
+    "CreatedAt": "2020-05-13T17:30:50.537Z",
+    "UpdatedAt": "2021-01-29T11:16:54.683Z",
+    "DeletedAt": null,
+    "IsActive": true,
+    "Name": "ut eum"
+  },
+  "JobTypeId": 2,
+  "JobType": {
+    "Id": 2,
+    "CreatedAt": "2020-08-07T01:50:30.823Z",
+    "UpdatedAt": "2021-01-29T07:06:51.512Z",
+    "DeletedAt": null,
+    "IsActive": true,
+    "Name": "Part-time"
+  },
+  "LevelId": 1,
+  "Level": {
+    "Id": 1,
+    "CreatedAt": "2020-05-04T21:13:37.986Z",
+    "UpdatedAt": "2021-01-29T12:06:58.103Z",
+    "DeletedAt": null,
+    "IsActive": true,
+    "Name": "facilis sunt"
+  },
+  "Description": "Porro perspiciatis quidem et rerum odio et molestiae qui aut. Voluptatem beatae rerum dolores doloribus laboriosam saepe incidunt voluptatibus. Incidunt doloribus est quas fugit. Non harum voluptates sed culpa. Commodi quis sed molestiae. Eos ipsa praesentium dignissimos.\n \rQuis omnis quis eveniet excepturi sapiente iste est eaque quia. Architecto excepturi harum. Neque eum non est ea placeat aut quis aspernatur et. Quae pariatur et omnis sed exercitationem sint natus minima est. Necessitatibus repellat id ab voluptatem fuga. Nihil quod quod libero architecto quo enim recusandae ullam.\n \rSunt veritatis quia aut laborum corporis eligendi. Ea atque soluta nisi ea commodi quis sint facere. Commodi et cum. Rerum corrupti cum omnis et nobis dolorum qui eveniet. Mollitia nobis tenetur natus debitis aut quia velit harum dolorum.",
+  "HowToApply": "Officiis recusandae maiores quae facilis. A illo voluptate minima porro iure amet quas accusamus quaerat. Odit ut assumenda debitis voluptas. Quam repudiandae ipsum sequi sequi ullam molestias ut et quia.",
+  "MinSalary": 23942,
+  "MaxSalary": 57777,
+  "IsRemote": false,
+  "IsRemoteOnly": true
+}

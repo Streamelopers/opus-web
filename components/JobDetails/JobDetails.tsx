@@ -3,7 +3,7 @@ import JobHeader from "./JobHeader/JobHeader";
 import JobInfo from "./JobInfo/JobInfo";
 import FacebookIcon from "../../assets/icons/FacebookIcon";
 import {
-  FacebookShareButton,
+  FacebookShareButton
   // LinkedinShareButton,
   // TelegramShareButton,
   // TwitterShareButton,

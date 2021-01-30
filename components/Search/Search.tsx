@@ -1,19 +1,29 @@
-import React from "react";
+import { Input, Icon, InputGroup, Button, Flex, Box } from "@chakra-ui/react";
+import React, { useState } from "react";
+import { FaSearch } from "react-icons/fa";
 
 const Search = () => {
+  const [isLoading, setIsLoading] = useState(false);
+
+  const handleSearch = () => {
+    setIsLoading(true);
+    setTimeout(() => {
+      setIsLoading(false);
+    }, 1000);
+  };
+
   return (
-    <div className="search-container">
-      <span className="legend">
-        <img src="https://api.iconify.design/ic:round-search.svg" alt="Search icon" />
-        Filter by
-      </span>
-      <div className="input-container">
-        <input className="form-control" type="search" placeholder="Keywords, location, job type..." />
-        <button className="btn btn-outline-success my-2 my-sm-0" type="submit">
-          Search!
-        </button>
-      </div>
-    </div>
+    <Box mt="2">
+      <InputGroup size="md">
+        <Input pr="4.5rem" type="text" placeholder="Keywords, location, job type..." />
+        <Button ml="2" outline="0 !important" colorScheme="blue" isLoading={isLoading} onClick={handleSearch}>
+          <Flex alignItems="center">
+            <Icon as={FaSearch} mr="1" />
+            Search!
+          </Flex>
+        </Button>
+      </InputGroup>
+    </Box>
   );
 };
 
