@@ -30,13 +30,13 @@ const Home: FC<JobsProps> = ({ jobs }: JobsProps) => {
         <Box mt="2">
           <Tabs index={categoryIndex} variant="enclosed" onChange={handleTabsChange}>
             <TabList>
-              {/* <Tab>All Jobs</Tab> */}
-              <Tab>Full-time</Tab>
-              <Tab>Part-time</Tab>
+              <Tab>Todos los Empleos</Tab>
+              <Tab>Tiempo Completo</Tab>
+              <Tab>Medio Tiempo</Tab>
               <Tab>Freelance</Tab>
-              <Tab>Temporary</Tab>
-              <Tab>Intership</Tab>
-              <Tab>Remote</Tab>
+              <Tab>Temporal</Tab>
+              <Tab>Pasantía</Tab>
+              <Tab>Remoto</Tab>
             </TabList>
             <TabPanels>
               <TabPanel pl="0" pr="0" pb="2">

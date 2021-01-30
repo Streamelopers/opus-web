@@ -1,4 +1,4 @@
-import faker from "faker";
+import faker from "faker/locale/es_MX";
 
 interface CommonFields {
   Id?: number;

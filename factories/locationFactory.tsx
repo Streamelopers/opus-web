@@ -1,4 +1,4 @@
-import faker from "faker";
+import faker from "faker/locale/es_MX";
 import commonFieldsFactory from "./commonFieldsFactory";
 
 export default (id: number) => {
