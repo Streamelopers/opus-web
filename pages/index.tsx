@@ -1,6 +1,5 @@
 import React, { FC, useEffect, useState } from "react";
 // import Hero from "../Hero/Hero";
-import Jobs from "../components/Jobs/Jobs";
 import { Tabs, TabList, TabPanels, Tab, TabPanel, Box } from "@chakra-ui/react";
 import Search from "../components/Search/Search";
 import { GetStaticProps } from "next";
