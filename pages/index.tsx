@@ -107,6 +107,7 @@ const Home: FC<JobsProps> = ({ jobs }: JobsProps) => {
 };
 
 export const getStaticProps: GetStaticProps = async () => {
+  console.log({ env: process.env });
   const { API_URL } = process.env;
   const response = await fetch(`${API_URL}/jobs`);
   const jobs = await response.json();
