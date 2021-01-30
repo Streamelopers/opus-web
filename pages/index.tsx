@@ -17,6 +17,9 @@ const Home: FC<JobsProps> = ({ jobs }: JobsProps) => {
   const [categoryIndex, setCategoryIndex] = useState<number>(0);
   const [categorizedJobs, setCategorizedJobs] = useState<{ [key: number]: Job[] }>();
 
+  const a = 23;
+  a = 5;
+
   const handleTabsChange = (tabIndex: number) => {
     if (tabIndex !== categoryIndex) {
       setCategoryIndex(tabIndex);
