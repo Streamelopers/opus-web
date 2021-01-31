@@ -8,7 +8,8 @@
     "start": "next start -H 0.0.0.0 -p ${PORT:-8080}",
     "export": "npm run build && next export -o _static",
     "pretest": "tsc --noEmit",
-    "lint": "eslint '*/**/*.{js,ts,tsx}' --quiet --fix"
+    "lint": "eslint --ext js,ts,tsx ./",
+    "lint:fix": "eslint --ext js,ts,tsx ./ --fix"
   },
   "dependencies": {
     "@chakra-ui/react": "^1.1.6",
@@ -24,7 +25,9 @@
     "react-dom": "17.0.1",
     "react-icons": "^4.1.0",
     "react-share": "^4.3.1",
-    "sass": "^1.32.5"
+    "sass": "^1.32.5",
+    "yup": "^0.32.8",
+    "yup-es": "^1.0.2"
   },
   "devDependencies": {
     "@types/faker": "^5.1.5",
