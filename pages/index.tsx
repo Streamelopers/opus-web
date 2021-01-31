@@ -1,8 +1,7 @@
 import React, { FC, useEffect, useState } from "react";
-// import Hero from "../Hero/Hero";
+import jobsData from "../data/jobs.json";
 import { Tabs, TabList, TabPanels, Tab, TabPanel, Box } from "@chakra-ui/react";
 import Search from "../components/Search/Search";
-import { GetStaticProps } from "next";
 import JobCard from "@/components/JobCard/JobCard";
 import { Job } from "types/Job";
 import groupBy from "lodash/groupBy";
@@ -106,17 +105,10 @@ const Home: FC<JobsProps> = ({ jobs }: JobsProps) => {
   );
 };
 
-export const getStaticProps: GetStaticProps = async () => {
-  // console.log({ env: process.env });
-  // const API_URL =
-  // process.env.NODE_ENV === "production"
-  // ? "https://opus-web-iu3wh.ondigitalocean.app/api"
-  // : "http://localhost:3000/api";
-  const response = await fetch(`https://apg38dcs9z.sharedwithexpose.com/api/jobs`);
-  const jobs = await response.json();
+export const getStaticProps = () => {
   return {
     props: {
-      jobs
+      jobs: jobsData
     }
   };
 };
