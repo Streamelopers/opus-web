@@ -31,7 +31,7 @@ const Header = () => {
           </NextLink>
           <NextLink href="/registro">
             <Link px={8} color="white" cursor="pointer">
-              Registrarse
+              Registro
             </Link>
           </NextLink>
         </Box>
