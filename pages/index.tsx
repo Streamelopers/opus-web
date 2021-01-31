@@ -108,11 +108,11 @@ const Home: FC<JobsProps> = ({ jobs }: JobsProps) => {
 
 export const getStaticProps: GetStaticProps = async () => {
   // console.log({ env: process.env });
-  const API_URL =
-    process.env.NODE_ENV === "production"
-      ? "https://opus-web-iu3wh.ondigitalocean.app/api"
-      : "http://localhost:3000/api";
-  const response = await fetch(`${API_URL}/jobs`);
+  // const API_URL =
+  // process.env.NODE_ENV === "production"
+  // ? "https://opus-web-iu3wh.ondigitalocean.app/api"
+  // : "http://localhost:3000/api";
+  const response = await fetch(`https://apg38dcs9z.sharedwithexpose.com/api/jobs`);
   const jobs = await response.json();
   return {
     props: {
