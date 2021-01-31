@@ -1,4 +1,4 @@
-import { useState } from "react";
+import React, { useState } from "react";
 import {
   Button,
   Flex,
@@ -10,10 +10,15 @@ import {
   Stack,
   Text,
   Heading,
-  Divider
+  Divider,
+  Link,
+  Icon
 } from "@chakra-ui/react";
-
+import NextLink from "next/link";
 import { Formik, Form, Field, FieldProps, FormikProps, FormikHelpers } from "formik";
+import { signUpForm } from "../../schemas/sign-up.schema";
+import { ValidationError } from "yup";
+import { FaEye, FaEyeSlash } from "react-icons/fa";
 interface FormValues {
   name: string;
   email: string;
@@ -29,10 +34,19 @@ const SignUpForm = () => {
   };
 
   function handleSubmit(values: FormValues, actions: FormikHelpers<FormValues>) {
-    actions.setFieldError("name", "adios");
-    setTimeout(() => {
-      actions.setSubmitting(false);
-    }, 2000);
+    signUpForm
+      .validate(values, { abortEarly: false })
+      .then((result) => {
+        console.log(result);
+      })
+      .catch((error: ValidationError) => {
+        error.inner.forEach((validationError) => {
+          actions.setFieldError(validationError.path as string, validationError.message);
+        });
+      })
+      .finally(() => {
+        actions.setSubmitting(false);
+      });
   }
 
   return (
@@ -76,9 +90,9 @@ const SignUpForm = () => {
                         id="password"
                         placeholder="******"
                       />
-                      <InputRightElement width="4.5rem" css={{ top: "37.5px" }}>
+                      <InputRightElement width="3rem" css={{ top: "37.5px" }}>
                         <Button h="1.75rem" size="sm" onClick={() => setShowPassword(!showPassword)}>
-                          {showPassword ? "Hide" : "Show"}
+                          {showPassword ? <Icon as={FaEye} /> : <Icon as={FaEyeSlash} />}
                         </Button>
                       </InputRightElement>
                       <FormErrorMessage>{form.errors.password}</FormErrorMessage>
@@ -86,9 +100,20 @@ const SignUpForm = () => {
                   )}
                 </Field>
 
-                <Button mt={4} colorScheme="teal" type="submit" isLoading={props.isSubmitting}>
+                <Button mt={4} colorScheme="blue" type="submit" isLoading={props.isSubmitting}>
                   Registrarse
                 </Button>
+
+                <Divider mt="5" />
+
+                <Flex justifyContent="center" alignItems="center" w="100%">
+                  <Text>Si ya tienes cuenta puedes</Text>
+                  <NextLink href="/iniciar-sesion">
+                    <Link ml="1" color="blue.300">
+                      Iniciar sesión
+                    </Link>
+                  </NextLink>
+                </Flex>
               </Stack>
             </Form>
           </Stack>
