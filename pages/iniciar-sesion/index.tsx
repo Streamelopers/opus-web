@@ -16,25 +16,23 @@ import {
 } from "@chakra-ui/react";
 import NextLink from "next/link";
 import { Formik, Form, Field, FieldProps, FormikProps, FormikHelpers } from "formik";
-import { signUpForm } from "../../schemas/sign-up.schema";
+import { signInForm } from "../../schemas/sign-in.schema";
 import { ValidationError } from "yup";
 import { FaEye, FaEyeSlash } from "react-icons/fa";
 interface FormValues {
-  name: string;
   email: string;
   password: string;
 }
 
-const SignUpForm = () => {
+const SignInForm = () => {
   const [showPassword, setShowPassword] = useState(false);
   const formValues: FormValues = {
-    name: "",
     email: "",
     password: ""
   };
 
   function handleSubmit(values: FormValues, actions: FormikHelpers<FormValues>) {
-    signUpForm
+    signInForm
       .validate(values, { abortEarly: false })
       .then((result) => {
         console.log(result);
@@ -54,21 +52,10 @@ const SignUpForm = () => {
       {(props: FormikProps<FormValues>) => (
         <Flex justifyContent="center" mt="25">
           <Stack maxW="500px">
-            <Heading fontWeight="700">Registro</Heading>
+            <Heading fontWeight="700">Inicio de Sesión</Heading>
             <Divider />
-            <Text fontSize="xl">Regístrate en la plataforma para poder empezar a publicar empleos</Text>
             <Form>
               <Stack spacing="20px" mt="5">
-                <Field name="name">
-                  {({ field, form }: FieldProps) => (
-                    <FormControl isInvalid={!!form.errors.name && !!form.touched.name} isRequired>
-                      <FormLabel htmlFor="name">Nombre</FormLabel>
-                      <Input {...field} id="name" placeholder="Juan Perez" autoComplete="name" />
-                      <FormErrorMessage>{form.errors.name}</FormErrorMessage>
-                    </FormControl>
-                  )}
-                </Field>
-
                 <Field name="email">
                   {({ field, form }: FieldProps) => (
                     <FormControl isInvalid={!!form.errors.email && !!form.touched.email} isRequired>
@@ -107,10 +94,10 @@ const SignUpForm = () => {
                 <Divider mt="5" />
 
                 <Flex justifyContent="center" alignItems="center" w="100%">
-                  <Text>Si ya tienes cuenta puedes</Text>
-                  <NextLink href="/iniciar-sesion">
+                  <Text>Si no tienes cuenta puedes</Text>
+                  <NextLink href="/registro">
                     <Link ml="1" color="blue.300">
-                      iniciar sesión aquí
+                      regístrarte ahora
                     </Link>
                   </NextLink>
                 </Flex>
@@ -123,4 +110,4 @@ const SignUpForm = () => {
   );
 };
 
-export default SignUpForm;
+export default SignInForm;
