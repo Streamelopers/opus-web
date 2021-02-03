@@ -1,20 +1,31 @@
+import { Box, Flex, Heading, Link, Text } from "@chakra-ui/react";
+import Image from "next/image";
 import React from "react";
-import "./JobHeader.scss";
 
 const JobHeader = () => {
   return (
-    <div className="job-header container">
-      <div className="company-logo">
-        <img alt="a" src="https://vuejobs.com/storage/avatars/EdCT23eseZfVDNWAwfm9xjTRxvc1bY0kZB6hzs1p.png" />
-      </div>
-      <div className="company-details">
-        <h2>Frontend Developer</h2>
-        <span>at</span>
-        <span>Teamwork.com</span>
-        <span>-</span>
-        {/* <a href="#">Visit company website</a> */}
-      </div>
-    </div>
+    <Flex mt="2em" mb="2em">
+      <Flex mr="6">
+        <Image
+          width="100"
+          height="100"
+          src="https://vuejobs.com/storage/avatars/yBYKiaPkbln6yDt4z0kA4sUikiCsq5JQRYc5PU0y.png"
+        />
+      </Flex>
+      <Flex flexDirection="column" justifyContent="center">
+        <Heading fontWeight="semibold">Senior Frontend Developer</Heading>
+        <Box>
+          <Text color="#adb5bd" as="span">
+            en
+          </Text>
+          <Text as="strong" ml="1" mr="1">
+            Jibble
+          </Text>
+          <Text as="span">- </Text>
+          <Link color="green.300">visita la página de la compañia</Link>
+        </Box>
+      </Flex>
+    </Flex>
   );
 };
 
