@@ -1,5 +1,6 @@
-import { Box, Badge, Text, Image, Flex, Link as Link, Icon } from "@chakra-ui/react";
+import { Box, Badge, Text, Flex, Link as Link, Icon, Center } from "@chakra-ui/react";
 import NextLink from "next/link";
+import Image from "next/image";
 import React, { FC, useState } from "react";
 import { Job } from "types/Job";
 import { formatDate, timeago } from "utils/utils";
@@ -29,11 +30,19 @@ const JobCard: FC<JobsCardProps> = ({ job }: JobsCardProps) => {
 
   const getRemoteBadge = () => {
     if (job.IsRemote) {
-      return <Badge colorScheme="yellow">Se permite remoto</Badge>;
+      return (
+        <Badge colorScheme="yellow" title="Trabajar de forma remota es una opción">
+          Permite remoto
+        </Badge>
+      );
     }
 
     if (job.IsRemoteOnly) {
-      return <Badge colorScheme="green">Remoto</Badge>;
+      return (
+        <Badge colorScheme="green" title="Se trabaja de forma remota a tiempo completo">
+          Remoto
+        </Badge>
+      );
     }
   };
 
@@ -62,9 +71,11 @@ const JobCard: FC<JobsCardProps> = ({ job }: JobsCardProps) => {
       </Badge>
 
       <Flex>
-        <Flex justifyContent="center" alignItems="center">
-          <Image ml="3" mr="3" minWidth="68px" maxWidth="68px" alt={job.Company.Name} src={job.Company.Picture} />
-        </Flex>
+        <Center>
+          <Center w="80px" h="80px">
+            <Image width="68px" height="68px" alt={job.Company.Name} src={job.Company.Picture} />
+          </Center>
+        </Center>
         <Box>
           <NextLink href={`/job/${job.Id}`}>
             <Link fontSize="x-large" color="blue.400">

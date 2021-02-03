@@ -15,7 +15,7 @@ export default () => {
   const userId: number = faker.random.number({ min: 1, max: 99999999 });
   const companyId: number = faker.random.number({ min: 1, max: 99999999 });
   const paymentTypeId: number = faker.random.number({ min: 1, max: 2 });
-  const levelId: number = faker.random.number({ min: 1, max: 3 });
+  const levelId: number = faker.random.number({ min: 1, max: 6 });
   const currencyId: number = faker.random.number({ min: 1, max: 5 });
 
   return {

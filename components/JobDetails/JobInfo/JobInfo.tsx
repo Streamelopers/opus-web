@@ -1,30 +1,26 @@
+import { Box, HStack, Text } from "@chakra-ui/react";
 import React from "react";
-import "./JobInfo.scss";
 
 const JobInfo = () => {
   return (
-    <div>
-      <div className="job-info">
-        <div className="container">
-          <div className="location">
-            <label>Location</label>
-            <p>San Mateo, CA, USA, Remote</p>
-          </div>
-          <div className="job-type">
-            <label>Job type</label>
-            <p>Full-time</p>
-          </div>
-          <div className="salary">
-            <label>Salary</label>
-            <p>USD 120000</p>
-          </div>
-          <div className="Posted">
-            <label>Posted</label>
-            <p>1 week ago</p>
-          </div>
-        </div>
-      </div>
-    </div>
+    <HStack spacing="35px" bg="gray.50" height="80px" padding="15px" borderRadius="10px">
+      <Box h="40px">
+        <Text fontWeight="700">Location</Text>
+        <Text>Remote</Text>
+      </Box>
+      <Box h="40px">
+        <Text fontWeight="700">Job Type</Text>
+        <Text>Full-time</Text>
+      </Box>
+      <Box h="40px">
+        <Text fontWeight="700">Salary</Text>
+        <Text>USD 40000-50000</Text>
+      </Box>
+      <Box h="40px">
+        <Text fontWeight="700">Posted</Text>
+        <Text>20 hours ago</Text>
+      </Box>
+    </HStack>
   );
 };
 
