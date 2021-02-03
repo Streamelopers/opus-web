@@ -56,7 +56,7 @@ const SignUpForm = () => {
           <Stack maxW="500px">
             <Heading fontWeight="700">Registro</Heading>
             <Divider />
-            <Text fontSize="xl">Regístrate en la plataforma para poder publicar empleos</Text>
+            <Text fontSize="xl">Regístrate en la plataforma para poder empezar a publicar empleos</Text>
             <Form>
               <Stack spacing="20px" mt="5">
                 <Field name="name">
@@ -110,7 +110,7 @@ const SignUpForm = () => {
                   <Text>Si ya tienes cuenta puedes</Text>
                   <NextLink href="/iniciar-sesion">
                     <Link ml="1" color="blue.300">
-                      Iniciar sesión
+                      iniciar sesión aquí
                     </Link>
                   </NextLink>
                 </Flex>
