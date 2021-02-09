@@ -1,10 +1,11 @@
-import { Box, Badge, Text, Flex, Link as Link, Icon, Center } from "@chakra-ui/react";
-import NextLink from "next/link";
+import { Badge, Box, Center, Flex, Icon, Link as Link, Text } from "@chakra-ui/react";
 import Image from "next/image";
+import NextLink from "next/link";
 import React, { FC, useState } from "react";
-import { Job } from "types/Job";
-import { formatDate, timeago } from "utils/utils";
-import { FaMapMarkerAlt, FaRegClock, FaBuilding } from "react-icons/fa";
+import { FaBuilding, FaMapMarkerAlt, FaRegClock } from "react-icons/fa";
+import { Job } from "@/types/Job";
+import { formatDate, timeago } from "@/utils/utils";
+import RemoteBadge from "./RemoteBadge";
 
 type JobsCardProps = {
   job: Job;
@@ -27,24 +28,6 @@ const JobCard: FC<JobsCardProps> = ({ job }: JobsCardProps) => {
           bg: "gray.50"
         }
       };
-
-  const getRemoteBadge = () => {
-    if (job.IsRemote) {
-      return (
-        <Badge colorScheme="yellow" title="Trabajar de forma remota es una opción">
-          Permite remoto
-        </Badge>
-      );
-    }
-
-    if (job.IsRemoteOnly) {
-      return (
-        <Badge colorScheme="green" title="Se trabaja de forma remota a tiempo completo">
-          Remoto
-        </Badge>
-      );
-    }
-  };
 
   return (
     <Box position="relative" p="2" rounded="md" border="1px" {...cardStyles}>
@@ -90,7 +73,8 @@ const JobCard: FC<JobsCardProps> = ({ job }: JobsCardProps) => {
             </Text>
             —
             <Icon ml="1" mr="1" as={FaMapMarkerAlt} /> {job.Location.Name}
-            &nbsp;{getRemoteBadge()}
+            <Box mr="1">{job.IsRemote || job.IsRemoteOnly ? "," : ""}</Box>
+            <RemoteBadge isRemote={job.IsRemote} isRemoteOnly={job.IsRemoteOnly} />
           </Text>
           <Text noOfLines={2} mt="1">
             {job.Description}
