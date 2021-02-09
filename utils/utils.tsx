@@ -18,5 +18,5 @@ export function formatDate(date: string): string {
     return date;
   }
 
-  return dayjs(date).format("dddd D [de] MMMM");
+  return dayjs(date).format("dddd D [de] MMMM [del] YYYY");
 }

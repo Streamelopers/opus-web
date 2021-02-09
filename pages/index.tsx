@@ -1,11 +1,12 @@
 import React, { FC, useEffect, useState } from "react";
 import jobsData from "../data/jobs.json";
 import { Tabs, TabList, TabPanels, Tab, TabPanel, Box } from "@chakra-ui/react";
-import Search from "../components/Search/Search";
-import JobCard from "@/components/JobCard/JobCard";
+import Search from "@/components/Search";
+import JobCard from "@/components/JobCard";
 import { Job } from "types/Job";
 import groupBy from "lodash/groupBy";
 import { JobTypeName } from "types/JobType";
+import Page from "@/components/Page";
 
 type JobsProps = {
   jobs: Array<Job>;
@@ -26,7 +27,10 @@ const Home: FC<JobsProps> = ({ jobs }: JobsProps) => {
   }, []);
 
   return (
-    <>
+    <Page
+      title="Lista de empleos"
+      description="Opus Web es el mejor sitio para encotrar empleo en República Dominicana"
+    >
       <div className="home-container container">
         <div className="hero">{/* <Hero /> */}</div>
 
@@ -101,7 +105,7 @@ const Home: FC<JobsProps> = ({ jobs }: JobsProps) => {
           </Tabs>
         </Box>
       </div>
-    </>
+    </Page>
   );
 };
 
