@@ -1,7 +1,7 @@
 import type { AppProps } from "next/app";
 
 import "../styles/globals.scss";
-import Header from "@/components/Header/Header";
+import Header from "@/components/Header";
 
 import { ChakraProvider, CSSReset } from "@chakra-ui/react";
 import { Container } from "@chakra-ui/react";
