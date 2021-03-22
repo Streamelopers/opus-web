@@ -14,7 +14,7 @@ const JobHeader: FC<JobsHeaderProps> = ({ picture, title, location, website }: J
   return (
     <Flex mt="2em" mb="2em">
       <Flex mr="6">
-        <Image width="100" height="100" src={picture} />
+        <Image width="100" height="100" src={picture} loading="lazy" />
       </Flex>
       <Flex flexDirection="column" justifyContent="center">
         <Heading fontWeight="semibold" fontSize="2xl">

@@ -15,6 +15,7 @@ const Header = () => {
                   htmlHeight="50"
                   htmlWidth="50"
                   mr="5"
+                  loading="lazy"
                 />
                 <Text>Opus</Text>
               </Flex>
