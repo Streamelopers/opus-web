@@ -11,7 +11,7 @@ import {
   Stack
 } from "@chakra-ui/react";
 import { Field, FieldProps, Form, Formik, FormikHelpers, FormikProps } from "formik";
-import React/*, { useState }*/ from "react";
+import React from "react";
 import * as yup from "yup";
 import { ValidationError } from "yup";
 
@@ -25,7 +25,6 @@ interface FormValues {
 }
 
 const ResetPassword = () => {
-  // const [showPassword, setShowPassword] = useState(false);
   const formValues: FormValues = {
     email: ""
   };
