@@ -2,8 +2,6 @@ import React from "react";
 import { yupResolver } from "@hookform/resolvers/yup";
 import { useForm } from "react-hook-form";
 import { resetPasswordForm } from "../../schemas/reset-password.schema";
-
-// styles & components
 import Page from "@/components/Page";
 import {
   Button,
@@ -30,7 +28,7 @@ const ResetPassword = () => {
     resolver: yupResolver(resetPasswordForm)
   });
 
-  const toSubmit = (data: FormValues) => {
+  const onSubmit = (data: FormValues) => {
     console.log(data);
   };
 
@@ -40,7 +38,7 @@ const ResetPassword = () => {
         <Stack maxW="500px">
           <Heading fontWeight="700">Recuperar contraseña</Heading>
           <Divider />
-          <form onSubmit={handleSubmit(toSubmit)}>
+          <form onSubmit={handleSubmit(onSubmit)}>
             <Stack spacing="20px" mt="5">
               <FormControl isInvalid={!!errors.email} isRequired>
                 <FormLabel htmlFor="email">Correo</FormLabel>

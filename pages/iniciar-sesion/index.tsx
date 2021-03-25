@@ -4,8 +4,6 @@ import { useForm } from "react-hook-form";
 import { yupResolver } from "@hookform/resolvers/yup";
 import { FaEye, FaEyeSlash } from "react-icons/fa";
 import { signInForm } from "../../schemas/sign-in.schema";
-
-// styles & components
 import Page from "@/components/Page";
 import {
   Button,
@@ -38,8 +36,7 @@ const SignInForm = () => {
     resolver: yupResolver(signInForm)
   });
 
-  const toSubmit = (data: FormValues) => {
-    console.log("sended....");
+  const onSubmit = (data: FormValues) => {
     console.log(data);
   };
 
@@ -49,7 +46,7 @@ const SignInForm = () => {
         <Stack maxW="500px">
           <Heading fontWeight="700">Inicio de Sesión</Heading>
           <Divider />
-          <form onSubmit={handleSubmit(toSubmit)}>
+          <form onSubmit={handleSubmit(onSubmit)}>
             <Stack spacing="20px" mt="5">
               <FormControl isInvalid={!!errors.email} isRequired>
                 <FormLabel htmlFor="email">Correo</FormLabel>

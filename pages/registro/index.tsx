@@ -4,8 +4,6 @@ import { useForm } from "react-hook-form";
 import { yupResolver } from "@hookform/resolvers/yup";
 import { FaEye, FaEyeSlash } from "react-icons/fa";
 import { signUpForm } from "../../schemas/sign-up.schema";
-
-// styles & components
 import Page from "@/components/Page";
 import {
   Button,
@@ -39,7 +37,7 @@ const SignUpForm = () => {
     resolver: yupResolver(signUpForm)
   });
 
-  const toSubmit = (data: FormValues) => {
+  const onSubmit = (data: FormValues) => {
     console.log(data);
   };
 
@@ -50,7 +48,7 @@ const SignUpForm = () => {
           <Heading fontWeight="700">Registro</Heading>
           <Divider />
           <Text fontSize="xl">Regístrate en la plataforma para poder empezar a publicar empleos</Text>
-          <form onSubmit={handleSubmit(toSubmit)}>
+          <form onSubmit={handleSubmit(onSubmit)}>
             <Stack spacing="20px" mt="5">
               <FormControl isInvalid={!!errors.name} isRequired>
                 <FormLabel htmlFor="name">Nombre</FormLabel>
