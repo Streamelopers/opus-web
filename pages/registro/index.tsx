@@ -22,7 +22,8 @@ import {
 } from "@chakra-ui/react";
 
 interface FormValues {
-  name: string;
+  firstname: string;
+  lastname: string;
   email: string;
   password: string;
 }
@@ -50,10 +51,16 @@ const SignUpForm = () => {
           <Text fontSize="xl">Regístrate en la plataforma para poder empezar a publicar empleos</Text>
           <form onSubmit={handleSubmit(onSubmit)}>
             <Stack spacing="20px" mt="5">
-              <FormControl isInvalid={!!errors.name} isRequired>
-                <FormLabel htmlFor="name">Nombre</FormLabel>
-                <Input id="name" placeholder="Juan Perez" autoComplete="name" {...register("name")} />
-                <FormErrorMessage>{errors.name?.message}</FormErrorMessage>
+              <FormControl isInvalid={!!errors.firstname} isRequired>
+                <FormLabel htmlFor="firstname">Nombres</FormLabel>
+                <Input id="firstname" placeholder="Juan Jose" autoComplete="firstname" {...register("firstname")} />
+                <FormErrorMessage>{errors.firstname?.message}</FormErrorMessage>
+              </FormControl>
+
+              <FormControl isInvalid={!!errors.lastname} isRequired>
+                <FormLabel htmlFor="lastname">Apellidos</FormLabel>
+                <Input id="lastname" placeholder="Perez Perez" autoComplete="lastname" {...register("lastname")} />
+                <FormErrorMessage>{errors.lastname?.message}</FormErrorMessage>
               </FormControl>
 
               <FormControl isInvalid={!!errors.email} isRequired>
