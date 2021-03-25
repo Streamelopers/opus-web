@@ -7,6 +7,7 @@ import { Job } from "types/Job";
 import groupBy from "lodash/groupBy";
 import { JobTypeName } from "types/JobType";
 import Page from "@/components/Page";
+import Paginator from "@/components/Paginator";
 
 type JobsProps = {
   jobs: Array<Job>;
@@ -103,6 +104,8 @@ const Home: FC<JobsProps> = ({ jobs }: JobsProps) => {
               </TabPanel>
             </TabPanels>
           </Tabs>
+
+          <Paginator currentPage={1} isDisabled={false} pagesQuantity={20} outerLimit={2} innerLimit={2} />
         </Box>
       </div>
     </Page>
