@@ -15,9 +15,9 @@ import {
   Text,
   Heading,
   Divider,
-Image,
-Textarea,
-Box,
+  Image,
+  Textarea,
+  Box,
 } from "@chakra-ui/react";
 
 interface FormValues {
@@ -70,14 +70,16 @@ const CompanyForm = () => {
                     <FormControl>
                     <FormLabel>Logo</FormLabel>
                     <Text fontSize="xs" color="gray.500">Formatos de imagen permitidos:  SVG, PNG, JPG..</Text>
-                    {imageSrc && <Image
+                    {imageSrc && 
+                    <Image
                         boxSize="150px"
                         objectFit="cover"
                         src={imageSrc}
                         m={2}
                     />}
                     <Input type="file" id="logo" hidden
-                     {...register("name")}
+                     {...register("imageUrl")}
+                     accept="image/x-png,image/gif,image/jpeg"
                      onChange={(e)=> handleImageChange(e)}  
                      />
                     <Button rightIcon={<FaImage />} colorScheme="gray" size="sm" htmlFor="logo" as="label">Seleccionar Imagen</Button>
