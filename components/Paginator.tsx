@@ -7,9 +7,10 @@ type PaginatorProps = {
   isDisabled: boolean;
   innerLimit: number;
   outerLimit: number;
-  currentPage: number;
+  currentPage: number | string;
   pagesQuantity: number;
-}
+  onPageChange: () => void;
+};
 
 const Paginator: FC<PaginatorProps> = ({
   isDisabled,

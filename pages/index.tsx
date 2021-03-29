@@ -1,11 +1,12 @@
 import React, { FC, useEffect, useState } from "react";
+import { useRouter, Router } from "next/router";
 import jobsData from "../data/jobs.json";
 import { Tabs, TabList, TabPanels, Tab, TabPanel, Box } from "@chakra-ui/react";
+import { JobTypeName } from "types/JobType";
+import { Job } from "types/Job";
 import Search from "@/components/Search";
 import JobCard from "@/components/JobCard";
-import { Job } from "types/Job";
 import groupBy from "lodash/groupBy";
-import { JobTypeName } from "types/JobType";
 import Page from "@/components/Page";
 import Paginator from "@/components/Paginator";
 
@@ -14,6 +15,7 @@ type JobsProps = {
 };
 
 const Home: FC<JobsProps> = ({ jobs }: JobsProps) => {
+  const { query } = useRouter();
   const [categoryIndex, setCategoryIndex] = useState<number>(0);
   const [categorizedJobs, setCategorizedJobs] = useState<{ [key: number]: Job[] }>();
 
@@ -105,7 +107,14 @@ const Home: FC<JobsProps> = ({ jobs }: JobsProps) => {
             </TabPanels>
           </Tabs>
 
-          <Paginator currentPage={1} isDisabled={false} pagesQuantity={20} outerLimit={2} innerLimit={2} />
+          <Paginator
+            currentPage={query.page}
+            isDisabled={false}
+            pagesQuantity={20}
+            outerLimit={2}
+            innerLimit={2}
+            onPageChange={() => {}}
+          />
         </Box>
       </div>
     </Page>
