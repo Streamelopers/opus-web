@@ -1,15 +1,23 @@
 import React, { FC } from "react";
-import { ChakraProvider, Icon } from "@chakra-ui/react";
+import { ChakraProvider, Icon, ButtonProps } from "@chakra-ui/react";
 import { Paginator as PaginatorChakra, Previous, Next, PageGroup, Container } from "chakra-paginator";
 import { FaChevronRight, FaChevronLeft } from "react-icons/fa";
+import { IconType } from "react-icons";
+
 
 type PaginatorProps = {
-  isDisabled: boolean;
-  innerLimit: number;
-  outerLimit: number;
-  currentPage: number | string;
   pagesQuantity: number;
-  onPageChange: () => void;
+  onPageChange: (page: number) => void;
+  normalStyles?: ButtonProps;
+  activeStyles?: ButtonProps;
+  separatorStyles?: ButtonProps;
+  currentPage?: number;
+  innerLimit?: number;
+  outerLimit?: number;
+  separatorIcon?: IconType;
+  hoverIconRight?: IconType;
+  hoverIconLeft?: IconType;
+  isDisabled?: boolean;
 };
 
 const Paginator: FC<PaginatorProps> = ({
@@ -46,7 +54,7 @@ const Paginator: FC<PaginatorProps> = ({
         <Container align="center" justify="space-between" w="full" p={4}>
           <Previous colorScheme="blue">
             <Icon as={FaChevronLeft} />
-            Anterior Siguiente
+            Anterior
           </Previous>
           <PageGroup isInline align="center" />
           <Next colorScheme="blue">
