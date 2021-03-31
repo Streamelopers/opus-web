@@ -42,7 +42,7 @@ const CompanyForm = () => {
   };
 
   const handleImageChange = (e: any) => {
-    let url = URL.createObjectURL(e.target.files[0]);
+    const url = URL.createObjectURL(e.target.files[0]);
     setImageSrc(url);
   }
 
