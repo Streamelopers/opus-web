@@ -108,7 +108,7 @@ const Home: FC<JobsProps> = ({ jobs }: JobsProps) => {
           </Tabs>
 
           <Paginator
-            currentPage={query.page}
+            currentPage={parseInt((query.page as string)||'0')}
             isDisabled={false}
             pagesQuantity={20}
             outerLimit={2}
