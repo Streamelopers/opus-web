@@ -1,5 +1,5 @@
 import React, { FC, useEffect, useState } from "react";
-import { useRouter, Router } from "next/router";
+import { useRouter } from "next/router";
 import jobsData from "../data/jobs.json";
 import { Tabs, TabList, TabPanels, Tab, TabPanel, Box } from "@chakra-ui/react";
 import { JobTypeName } from "types/JobType";
