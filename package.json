@@ -45,7 +45,7 @@
     "faker": "^5.5.3",
     "husky": "^7.0.1",
     "lint-staged": "^11.0.0",
-    "prettier": "^2.3.2",
+    "prettier": "2.3.2",
     "typescript": "^4.3.5",
     "webpack": "^5.44.0"
   },
