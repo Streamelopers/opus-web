@@ -7,7 +7,7 @@ const RelatedJobs = () => {
     <Box mt="5" mb="5">
       <Text fontSize="2xl" fontWeight="600">
         ¿Estás buscando más trabajos?
-          </Text>
+      </Text>
       <Divider mt="2" mb="3" />
 
       <Box>
@@ -37,7 +37,7 @@ const RelatedJobs = () => {
               <Text>
                 <Text as="span" color="gray.400">
                   en
-                    </Text>
+                </Text>
                 <Text as="strong"> CyberCoder </Text>
                 <Text as="span">Washington, DC, USA - Washington, DC, USA</Text>
               </Text>
@@ -73,7 +73,7 @@ const RelatedJobs = () => {
               <Text>
                 <Text as="span" color="gray.400">
                   en
-                    </Text>
+                </Text>
                 <Text as="strong"> CyberCoder </Text>
                 <Text as="span">Washington, DC, USA - Washington, DC, USA</Text>
               </Text>
@@ -109,7 +109,7 @@ const RelatedJobs = () => {
               <Text>
                 <Text as="span" color="gray.400">
                   en
-                    </Text>
+                </Text>
                 <Text as="strong"> CyberCoder </Text>
                 <Text as="span">Washington, DC, USA - Washington, DC, USA</Text>
               </Text>
@@ -123,12 +123,9 @@ const RelatedJobs = () => {
 
       <Button w="100%" bg="blue.300" _hover={{ bg: "blue.400" }} color="white">
         Cargar más trabajos
-          </Button>
+      </Button>
     </Box>
   );
 };
 
 export default RelatedJobs;
-
-
-

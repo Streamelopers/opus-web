@@ -15,19 +15,19 @@ const JobCard: FC<JobsCardProps> = ({ job }: JobsCardProps) => {
   const [isFeatured] = useState(false);
   const cardStyles = isFeatured
     ? {
-      borderColor: "yellow.400",
-      bg: "orange.50",
-      _hover: {
-        bg: "orange.100"
+        borderColor: "yellow.400",
+        bg: "orange.50",
+        _hover: {
+          bg: "orange.100"
+        }
       }
-    }
     : {
-      borderColor: "gray.200",
-      bg: "white",
-      _hover: {
-        bg: "gray.50"
-      }
-    };
+        borderColor: "gray.200",
+        bg: "white",
+        _hover: {
+          bg: "gray.50"
+        }
+      };
 
   return (
     <Box position="relative" p="2" rounded="md" border="1px" {...cardStyles}>
@@ -73,7 +73,9 @@ const JobCard: FC<JobsCardProps> = ({ job }: JobsCardProps) => {
             </Text>
             —
             <Icon ml="1" mr="1" as={FaMapMarkerAlt} /> {job.Location.Name}
-            <Box as="span" mr="1">{job.IsRemote || job.IsRemoteOnly ? "," : ""}</Box>
+            <Box as="span" mr="1">
+              {job.IsRemote || job.IsRemoteOnly ? "," : ""}
+            </Box>
             <RemoteBadge isRemote={job.IsRemote} isRemoteOnly={job.IsRemoteOnly} />
           </Text>
           <Text noOfLines={2} mt="1">

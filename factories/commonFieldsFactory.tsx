@@ -9,7 +9,7 @@ interface CommonFields {
 }
 export default (override?: CommonFields) => {
   return {
-    Id: faker.random.number(250),
+    Id: faker.datatype.number(250),
     CreatedAt: faker.date.past(),
     UpdatedAt: faker.date.recent(),
     DeletedAt: null,

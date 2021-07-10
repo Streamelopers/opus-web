@@ -17,7 +17,7 @@ import {
   Divider,
   Image,
   Textarea,
-  Box,
+  Box
 } from "@chakra-ui/react";
 
 interface FormValues {
@@ -44,7 +44,7 @@ const CompanyForm = () => {
   const handleImageChange = (e: any) => {
     const url = URL.createObjectURL(e.target.files[0]);
     setImageSrc(url);
-  }
+  };
 
   return (
     <Page title="Compañia" description="Formulario de Creacion de Compañia">
@@ -53,12 +53,7 @@ const CompanyForm = () => {
           <Heading fontWeight="700">Editar de Compañia</Heading>
           <Divider />
           <Text fontSize="xl">Editar los detalles de tu compañia</Text>
-          <Box
-            p={4}
-            borderWidth="1px"
-            rounded="lg"
-            shadow="1px 1px 3px rgba(0,0,0,0.3)"
-          >
+          <Box p={4} borderWidth="1px" rounded="lg" shadow="1px 1px 3px rgba(0,0,0,0.3)">
             <form onSubmit={handleSubmit(onSubmit)}>
               <Stack spacing="20px" mt="5">
                 <FormControl isInvalid={!!errors.name} isRequired>
@@ -69,20 +64,21 @@ const CompanyForm = () => {
 
                 <FormControl>
                   <FormLabel>Logo</FormLabel>
-                  <Text fontSize="xs" color="gray.500">Formatos de imagen permitidos: SVG, PNG y JPG.</Text>
-                  {imageSrc &&
-                    <Image
-                      boxSize="150px"
-                      objectFit="cover"
-                      src={imageSrc}
-                      m={2}
-                    />}
-                  <Input type="file" id="logo" hidden
+                  <Text fontSize="xs" color="gray.500">
+                    Formatos de imagen permitidos: SVG, PNG y JPG.
+                  </Text>
+                  {imageSrc && <Image boxSize="150px" objectFit="cover" src={imageSrc} m={2} />}
+                  <Input
+                    type="file"
+                    id="logo"
+                    hidden
                     {...register("imageUrl")}
                     accept="image/x-png,image/gif,image/jpeg"
                     onChange={(e) => handleImageChange(e)}
                   />
-                  <Button rightIcon={<FaImage />} colorScheme="gray" size="sm" htmlFor="logo" as="label">Seleccionar Imagen</Button>
+                  <Button rightIcon={<FaImage />} colorScheme="gray" size="sm" htmlFor="logo" as="label">
+                    Seleccionar Imagen
+                  </Button>
                 </FormControl>
 
                 <FormControl isInvalid={!!errors.url}>
@@ -99,11 +95,7 @@ const CompanyForm = () => {
 
                 <FormControl isInvalid={!!errors.description}>
                   <FormLabel htmlFor="text">Descripción</FormLabel>
-                  <Textarea
-                    size="sm"
-                    placeholder="Descripción de la compañia"
-                    {...register("description")}
-                  />
+                  <Textarea size="sm" placeholder="Descripción de la compañia" {...register("description")} />
                   <FormErrorMessage>{errors.description?.message}</FormErrorMessage>
                 </FormControl>
 
@@ -117,6 +109,6 @@ const CompanyForm = () => {
       </Flex>
     </Page>
   );
-}
+};
 
 export default CompanyForm;
