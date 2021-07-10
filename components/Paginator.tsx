@@ -4,7 +4,6 @@ import { Paginator as PaginatorChakra, Previous, Next, PageGroup, Container } fr
 import { FaChevronRight, FaChevronLeft } from "react-icons/fa";
 import { IconType } from "react-icons";
 
-
 type PaginatorProps = {
   pagesQuantity: number;
   onPageChange: (page: number) => void;

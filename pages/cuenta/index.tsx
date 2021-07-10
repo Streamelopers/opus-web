@@ -49,75 +49,70 @@ const EditProfileForm = () => {
           <Heading fontWeight="700"> Editar tu cuenta</Heading>
           <Divider />
           <Text fontSize="xl">Editar los detalles de tu cuenta</Text>
-            <Box
-                p={4}
-                borderWidth="1px"
-                rounded="lg"
-                shadow="1px 1px 3px rgba(0,0,0,0.3)"
-            >
+          <Box p={4} borderWidth="1px" rounded="lg" shadow="1px 1px 3px rgba(0,0,0,0.3)">
             <form onSubmit={handleSubmit(onSubmit)}>
-                <Stack spacing="20px" mt="5">
+              <Stack spacing="20px" mt="5">
                 <FormControl isInvalid={!!errors.firstName} isRequired>
-                    <FormLabel htmlFor="firstname">Nombres</FormLabel>
-                    <Input id="firstname" placeholder="Juan Jose" autoComplete="firstname" {...register("firstName")} />
-                    <FormErrorMessage>{errors.firstName?.message}</FormErrorMessage>
+                  <FormLabel htmlFor="firstname">Nombres</FormLabel>
+                  <Input id="firstname" placeholder="Juan Jose" autoComplete="firstname" {...register("firstName")} />
+                  <FormErrorMessage>{errors.firstName?.message}</FormErrorMessage>
                 </FormControl>
 
                 <FormControl isInvalid={!!errors.lastName} isRequired>
-                    <FormLabel htmlFor="lastname">Apellidos</FormLabel>
-                    <Input id="lastname" placeholder="Perez Perez" autoComplete="lastname" {...register("lastName")} />
-                    <FormErrorMessage>{errors.lastName?.message}</FormErrorMessage>
+                  <FormLabel htmlFor="lastname">Apellidos</FormLabel>
+                  <Input id="lastname" placeholder="Perez Perez" autoComplete="lastname" {...register("lastName")} />
+                  <FormErrorMessage>{errors.lastName?.message}</FormErrorMessage>
                 </FormControl>
 
                 <FormControl isInvalid={!!errors.email} isRequired>
-                    <FormLabel htmlFor="email">Correo</FormLabel>
-                    <Input
+                  <FormLabel htmlFor="email">Correo</FormLabel>
+                  <Input
                     type="email"
                     autoComplete="email"
                     id="email"
                     placeholder="juan@ejemplo.com"
                     {...register("email")}
-                    />
-                    <FormErrorMessage>{errors.email?.message}</FormErrorMessage>
+                  />
+                  <FormErrorMessage>{errors.email?.message}</FormErrorMessage>
                 </FormControl>
 
                 <FormControl isInvalid={!!errors.password} isRequired>
-                    <FormLabel htmlFor="password">Contraseña</FormLabel>
-                    <Input
+                  <FormLabel htmlFor="password">Contraseña</FormLabel>
+                  <Input
                     type={showPassword ? "text" : "password"}
                     autoComplete="new-password"
                     id="password"
                     placeholder="******"
                     {...register("password")}
-                    />
-                    <InputRightElement width="3rem" css={{ top: "37.5px" }}>
+                  />
+                  <InputRightElement width="3rem" css={{ top: "37.5px" }}>
                     <Button h="1.75rem" size="sm" onClick={() => setShowPassword(!showPassword)}>
-                        {showPassword ? <Icon as={FaEye} /> : <Icon as={FaEyeSlash} />}
+                      {showPassword ? <Icon as={FaEye} /> : <Icon as={FaEyeSlash} />}
                     </Button>
-                    </InputRightElement>
-                    <FormErrorMessage>{errors.password?.message}</FormErrorMessage>
+                  </InputRightElement>
+                  <FormErrorMessage>{errors.password?.message}</FormErrorMessage>
                 </FormControl>
 
                 <FormControl isInvalid={!!errors.confirmPassword} isRequired>
-                    <FormLabel htmlFor="confirmPassword">Confirmación de Contraseña</FormLabel>
-                    <Input
+                  <FormLabel htmlFor="confirmPassword">Confirmación de Contraseña</FormLabel>
+                  <Input
                     type={showPassword ? "text" : "password"}
                     autoComplete="new-password"
                     id="confirmPassword"
                     placeholder="******"
                     {...register("confirmPassword")}
-                    />
-                    <FormErrorMessage>{errors.confirmPassword?.message}</FormErrorMessage>
+                  />
+                  <FormErrorMessage>{errors.confirmPassword?.message}</FormErrorMessage>
                 </FormControl>
 
                 <Divider />
 
                 <Button mt={4} colorScheme="blue" type="submit" isLoading={isSubmitting}>
-                    Guardar
+                  Guardar
                 </Button>
-                </Stack>
+              </Stack>
             </form>
-            </Box>
+          </Box>
         </Stack>
       </Flex>
     </Page>
