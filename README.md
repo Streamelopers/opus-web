@@ -1,46 +1,56 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+Esto es un proyecto de [Next.js](https://nextjs.org/) utilizando [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
-## Setup
+## Tecnologías
+- [Next.js](https://nextjs.org) - es un framework construido sobre Node.js que permite las funcionalidades de las aplicaciones web basadas en React, como el renderizado del lado del servidor y la generación de sitios web estáticos.
+- [Typescript](https://www.typescriptlang.org) - es un lenguaje de código abierto que se basa en JavaScript, una de las herramientas más utilizadas del mundo, añadiendo definiciones de tipos estáticos.
+- [Chakra UI](https://chakra-ui.com) - es una librería de componentes, modular y accesible que te da los bloques de construcción que necesitas para construir tus aplicaciones React.
+- [Sass](https://sass-lang.com/) - es un preprocesador CSS es una herramienta que nos permite generar, de manera automática, hojas de estilo, añadiéndoles características que no tiene CSS.
+
+# Requerimientos
+ - Node.js 12 o más nuevo
+ - NPM 6 o más nuevo
+
+Para instalar ve [aquí](https://nodejs.org/en/download/) y descarga la versión correspondiente.
+
+## Configuración
 
 ```bash
 npm install
 ```
 
-Copy the environment file template.
+Copia el template del archivo de las variables de entorno.
 
 ```bash
 cp .env.example .env.local
 ```
 
-Then fill the values of the `.env.local`. More info [here](https://nextjs.org/docs/basic-features/environment-variables)
+A continuación, rellene los valores del `.env.local`. Más información [aquí](https://nextjs.org/docs/basic-features/environment-variables)
 
-## Run the development server
+## Ejecutar el servidor de desarrollo
 
 ```bash
 npm run dev
-# or
-yarn dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Abra [http://localhost:3000](http://localhost:3000) con su navegador para ver la apliacación funcionando.
 
-You can start editing the page by modifying `pages/index.tsx`. The page auto-updates as you edit the file.
+Puedes empezar a editar la página modificando `pages/index.tsx`. La página se actualiza automáticamente a medida que se edita el archivo.
 
-[API routes](https://nextjs.org/docs/api-routes/introduction) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.tsx`.
+Se puede acceder a las [rutas del API](https://nextjs.org/docs/api-routes/introduction) en [http://localhost:3000/api/hello](http://localhost:3000/api/hello). Este endpoint se puede editar en `pages/api/hello.tsx`.
 
-The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/api-routes/introduction) instead of React pages.
+El directorio `pages/api` se asigna a `/api/*`. Los archivos de este directorio se tratan como [rutas para el API](https://nextjs.org/docs/api-routes/introduction) en lugar de páginas React.
 
-## Learn More
+## Aprende más
 
-To learn more about Next.js, take a look at the following resources:
+Para saber más sobre Next.js, eche un vistazo a los siguientes recursos:
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+- [Documentation de Next.js](https://nextjs.org/docs) - conozca las características y la API de Next.js.
+- [Aprende Next.js](https://nextjs.org/learn) - un tutorial interactivo de Next.js.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+Puedes consultar [el repositorio GitHub de Next.js](https://github.com/vercel/next.js/): ¡tus comentarios y contribuciones son bienvenidos!
 
-## Deploy on Vercel
+## Despliegue en Vercel
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/import?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+La forma más sencilla de desplegar tu aplicación Next.js es utilizar la [Plataforma Vercel](https://vercel.com/import?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) de los creadores de Next.js.
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+Consulta nuestra [documentación sobre el despliegue de Next.js](https://nextjs.org/docs/deployment) para obtener más detalles.
