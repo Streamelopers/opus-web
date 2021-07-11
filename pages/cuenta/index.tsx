@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { useForm } from "react-hook-form";
 import { yupResolver } from "@hookform/resolvers/yup";
 import { FaEye, FaEyeSlash } from "react-icons/fa";
-import { editProfileForm } from "../../schemas/edit-user-profile-.schema";
+import { editProfileForm } from "../../schemas/edit-user-profile.schema";
 import Page from "@/components/Page";
 import {
   Button,

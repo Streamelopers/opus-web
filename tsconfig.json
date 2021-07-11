@@ -22,8 +22,9 @@
     "esModuleInterop": true,
     "resolveJsonModule": true,
     "isolatedModules": true,
-    "jsx": "preserve"
+    "jsx": "preserve",
+    "noImplicitAny": false
   },
-  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", "data/generateJobs.tsx"],
+  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", "data/generateJobs.ts"],
   "exclude": ["node_modules"]
 }

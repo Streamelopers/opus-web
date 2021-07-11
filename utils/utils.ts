@@ -1,9 +1,4 @@
-import dayjs from "dayjs";
-import "dayjs/locale/es";
-import relativeTime from "dayjs/plugin/relativeTime";
-dayjs.extend(relativeTime);
-
-dayjs.locale("es");
+import { dayjs } from "../config/dayjs";
 
 export function timeago(date: string): string {
   if (!dayjs(date).isValid()) {

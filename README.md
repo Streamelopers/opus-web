@@ -1,14 +1,16 @@
 Esto es un proyecto de [Next.js](https://nextjs.org/) utilizando [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
 ## Tecnologías
+
 - [Next.js](https://nextjs.org) - es un framework construido sobre Node.js que permite las funcionalidades de las aplicaciones web basadas en React, como el renderizado del lado del servidor y la generación de sitios web estáticos.
 - [Typescript](https://www.typescriptlang.org) - es un lenguaje de código abierto que se basa en JavaScript, una de las herramientas más utilizadas del mundo, añadiendo definiciones de tipos estáticos.
 - [Chakra UI](https://chakra-ui.com) - es una librería de componentes, modular y accesible que te da los bloques de construcción que necesitas para construir tus aplicaciones React.
 - [Sass](https://sass-lang.com/) - es un preprocesador CSS es una herramienta que nos permite generar, de manera automática, hojas de estilo, añadiéndoles características que no tiene CSS.
 
 # Requerimientos
- - Node.js 12 o más nuevo
- - NPM 6 o más nuevo
+
+- Node.js 12 o más nuevo
+- NPM 6 o más nuevo
 
 Para instalar ve [aquí](https://nodejs.org/en/download/) y descarga la versión correspondiente.
 
@@ -31,6 +33,8 @@ A continuación, rellene los valores del `.env.local`. Más información [aquí]
 ```bash
 npm run dev
 ```
+
+Si estás utilizando Windows entonces ejecuta `npm run dev:windows` ya que hay un bug en Next.js que hace que el Fash refresh no funcione bien en Windows, puedes ver mas detalles aquí: [#Bug: Fast Refresh is not working on Windows 10](https://github.com/vercel/next.js/discussions/22214#discussioncomment-795047)
 
 Abra [http://localhost:3000](http://localhost:3000) con su navegador para ver la apliacación funcionando.
 

@@ -8,6 +8,7 @@ import { Container } from "@chakra-ui/react";
 
 import { extendTheme } from "@chakra-ui/react";
 import { ReactNode } from "react";
+import "../config/yup";
 
 const theme = extendTheme({
   config: {
