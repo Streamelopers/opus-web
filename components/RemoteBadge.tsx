@@ -23,7 +23,7 @@ const RemoteBadge: FC<RemoteBadgeProps> = ({ isRemote, isRemoteOnly }: RemoteBad
     );
   }
 
-  return <span />;
+  return null;
 };
 
 export default RemoteBadge;
