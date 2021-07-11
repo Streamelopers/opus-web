@@ -1,5 +1,5 @@
 import RemoteBadge from "@/components/RemoteBadge";
-import { Box, HStack, Text } from "@chakra-ui/react";
+import { Box, Flex, HStack, Text } from "@chakra-ui/react";
 import React, { FC } from "react";
 import { formatDate, timeago } from "@/utils/utils";
 
@@ -27,18 +27,16 @@ const JobInfo: FC<JobInfoProps> = ({
   isRemoteOnly
 }: JobInfoProps) => {
   return (
-    <HStack spacing="35px" bg="gray.50" height="80px" padding="15px" borderRadius="10px">
+    <HStack spacing="35px" bg="blue.50" height="80px" padding="15px" borderRadius="10px">
       <Box h="40px">
         <Text fontWeight="700">Ubicación</Text>
-        <Text>
+        <Flex alignItems="center">
           <Box as="span">{location}</Box>
           <Box mr="1" as="span">
             {location && (isRemote || isRemoteOnly) ? "," : ""}
           </Box>
-          <Box as="span">
-            {isRemote || isRemoteOnly ? <RemoteBadge isRemote={isRemote} isRemoteOnly={isRemoteOnly} /> : ""}
-          </Box>
-        </Text>
+          {isRemote || isRemoteOnly ? <RemoteBadge isRemote={isRemote} isRemoteOnly={isRemoteOnly} /> : ""}
+        </Flex>
       </Box>
       <Box h="40px">
         <Text fontWeight="700">Tipo de Trabajo</Text>
@@ -48,9 +46,9 @@ const JobInfo: FC<JobInfoProps> = ({
         <Box h="40px">
           <Text fontWeight="700">Salario</Text>
           <Text>
-            {currencyCode} {minSalary}
-            {minSalary && maxSalary ? "-" : ""}
-            {maxSalary}
+            {currencyCode} {minSalary ? new Intl.NumberFormat().format(minSalary) : null}
+            {minSalary && maxSalary ? " - " : ""}
+            {maxSalary ? new Intl.NumberFormat().format(maxSalary) : null}
           </Text>
         </Box>
       )}
