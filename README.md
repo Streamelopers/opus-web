@@ -14,6 +14,12 @@ Esto es un proyecto de [Next.js](https://nextjs.org/) utilizando [`create-next-a
 
 Para instalar ve [aquí](https://nodejs.org/en/download/) y descarga la versión correspondiente.
 
+# Backend
+
+[Endpoints](https://api-dev.opus.do/swagger)
+
+[Entidades](https://github.com/Streamelopers/opus-api/blob/main/Requerimientos/Entidades.md)
+
 ## Configuración
 
 ```bash
