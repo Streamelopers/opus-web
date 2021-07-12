@@ -16,9 +16,8 @@ Para instalar ve [aquí](https://nodejs.org/en/download/) y descarga la versión
 
 # Backend
 
-[Endpoints](https://api-dev.opus.do/swagger)
-
-[Entidades](https://github.com/Streamelopers/opus-api/blob/main/Requerimientos/Entidades.md)
+- [Endpoints](https://api-dev.opus.do/swagger)
+- [Entidades](https://github.com/Streamelopers/opus-api/blob/main/Requerimientos/Entidades.md)
 
 ## Configuración
 
