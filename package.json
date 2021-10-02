@@ -26,7 +26,7 @@
     "prop-types": "^15.7.2",
     "react": "^17.0.2",
     "react-dom": "^17.0.2",
-    "react-hook-form": "^7.16.2",
+    "react-hook-form": "^7.17.0",
     "react-icons": "^4.2.0",
     "react-share": "^4.4.0",
     "sass": "^1.42.1",
@@ -42,12 +42,12 @@
     "eslint": "^7.32.0",
     "eslint-config-next": "^11.1.2",
     "eslint-config-prettier": "^8.3.0",
-    "eslint-plugin-prettier": "^3.4.1",
+    "eslint-plugin-prettier": "^4.0.0",
     "eslint-plugin-react": "^7.26.1",
     "faker": "^5.5.3",
     "husky": "^7.0.2",
     "lint-staged": "^11.1.2",
-    "prettier": "2.3.2",
+    "prettier": "^2.4.1",
     "typescript": "^4.4.3",
     "webpack": "^5.56.0"
   }
