@@ -28,6 +28,11 @@ const Header = () => {
               Inicio
             </Link>
           </NextLink>
+          <NextLink href="/colaboradores">
+            <Link px={8} color="white" cursor="pointer">
+              Colaboradores
+            </Link>
+          </NextLink>
           <NextLink href="/iniciar-sesion">
             <Link px={8} color="white" cursor="pointer">
               Iniciar sesión
