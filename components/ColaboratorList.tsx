@@ -11,7 +11,7 @@ type ColaboratorListProps = {
 const ColaboratorList: FC<ColaboratorListProps> = ({ colaborators, title }) => {
   const renderColaboratorCards = () => {
     const cards = colaborators.map((colaborator) => (
-      <GridItem w="100%" gap>
+      <GridItem w="100%">
         <ColaboratorCard colaborator={colaborator} />
       </GridItem>
     ));
