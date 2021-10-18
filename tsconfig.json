@@ -25,6 +25,6 @@
     "jsx": "preserve",
     "noImplicitAny": false
   },
-  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", "data/generateJobs.ts"],
+  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", "data/generateJobs.ts", "./env.d.ts"],
   "exclude": ["node_modules"]
 }
