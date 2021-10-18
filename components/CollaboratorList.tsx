@@ -1,18 +1,18 @@
-import { Colaborator } from "@/types/Colaborator";
+import { Collaborator } from "@/types/Collaborator";
 import { Box, Grid, GridItem } from "@chakra-ui/layout";
 import React, { FC } from "react";
-import ColaboratorCard from "./ColaboratorCard";
+import CollaboratorCard from "./CollaboratorCard";
 
-type ColaboratorListProps = {
-  colaborators: Array<Colaborator>;
+type CollaboratorListProps = {
+  collaborators: Array<Collaborator>;
   title: string;
 };
 
-const ColaboratorList: FC<ColaboratorListProps> = ({ colaborators, title }) => {
-  const renderColaboratorCards = () => {
-    const cards = colaborators.map((colaborator) => (
+const CollaboratorList: FC<CollaboratorListProps> = ({ collaborators, title }) => {
+  const renderCollaboratorCards = () => {
+    const cards = collaborators.map((collaborator) => (
       <GridItem w="100%">
-        <ColaboratorCard colaborator={colaborator} />
+        <CollaboratorCard collaborator={collaborator} />
       </GridItem>
     ));
 
@@ -27,9 +27,9 @@ const ColaboratorList: FC<ColaboratorListProps> = ({ colaborators, title }) => {
       <Box marginBottom="2em" marginTop="1em" as="h2" fontWeight="bold" fontSize="3xl" textAlign="center">
         <h1>{title}</h1>
       </Box>
-      {renderColaboratorCards()}
+      {renderCollaboratorCards()}
     </Box>
   );
 };
 
-export default ColaboratorList;
+export default CollaboratorList;
