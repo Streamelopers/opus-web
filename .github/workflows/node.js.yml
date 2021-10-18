@@ -37,13 +37,7 @@ jobs:
       run: npm i
 
     - name: Run build
-      run: npm run build --if-present
-
-    - name: Start server
-      run: npm start
+      run: npm run build
 
     - name: Run linter
       run: npm run lint
-
-    - name: Run tests
-      run: npm test
