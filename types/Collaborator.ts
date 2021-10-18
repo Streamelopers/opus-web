@@ -1,4 +1,4 @@
-export interface Colaborator {
+export interface Collaborator {
   login: string;
   avatar_url: string;
   contributions: number;

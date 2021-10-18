@@ -1,46 +1,44 @@
-import ColaboratorList from "@/components/ColaboratorList";
+import CollaboratorList from "@/components/CollaboratorList";
 import Page from "@/components/Page";
-import { Colaborator } from "@/types/Colaborator";
+import { Collaborator } from "@/types/Collaborator";
 import { GetServerSideProps } from "next";
 import React, { FC } from "react";
 
-type ColaboratorsProps = {
-  webColaborators: Array<Colaborator>;
-  apiColaborators: Array<Colaborator>;
+type CollaboratorsProps = {
+  webCollaborators: Collaborator[];
+  apiCollaborators: Collaborator[];
 };
 
-const Colaborators: FC<ColaboratorsProps> = ({ webColaborators, apiColaborators }) => {
+const Collaborators: FC<CollaboratorsProps> = ({ webCollaborators, apiCollaborators }) => {
   return (
     <Page>
       <>
-        <ColaboratorList colaborators={webColaborators} title={"Personas que han colaborado en el proyecto WEB"} />
-        <ColaboratorList colaborators={apiColaborators} title={"Personas que han colaborado en el proyecto API"} />
+        <CollaboratorList collaborators={webCollaborators} title={"Personas que han colaborado en el proyecto WEB"} />
+        <CollaboratorList collaborators={apiCollaborators} title={"Personas que han colaborado en el proyecto API"} />
       </>
     </Page>
   );
 };
 
-const getWebColaborators = async () => {
-  const response = await fetch(process.env.COLABORATORS_WEB_URL);
-  let data: Array<Colaborator> = await response.json();
+const getWebCollaborators = async () => {
+  const response = await fetch("https://api.github.com/repositories/329978688/contributors");
+  let data: Collaborator[] = await response.json();
   return data;
 };
 
-const getApiColaborators = async () => {
-  const response = await fetch(process.env.COLABORATORS_API_URL);
-  let data: Array<Colaborator> = await response.json();
+const getApiCollaborators = async () => {
+  const response = await fetch("https://api.github.com/repositories/329980816/contributors");
+  let data: Collaborator[] = await response.json();
   return data;
 };
 
 export const getServerSideProps: GetServerSideProps = async () => {
-  let webColaborators = await getWebColaborators();
-  let apiColaborators = await getApiColaborators();
   return {
     props: {
-      webColaborators,
-      apiColaborators
+      webCollaborators: await getWebCollaborators(),
+      apiCollaborators: await getApiCollaborators()
     }
   };
 };
 
-export default Colaborators;
+export default Collaborators;

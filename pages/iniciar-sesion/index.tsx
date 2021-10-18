@@ -92,7 +92,7 @@ const SignInForm = () => {
               </Link>
             </NextLink>
             <Button colorScheme="blue" type="submit" width="100%" isLoading={isSubmitting}>
-              Registrarse
+              Iniciar sesión
             </Button>
 
             <Divider mt="5" />
