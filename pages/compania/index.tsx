@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { useForm } from "react-hook-form";
 import { yupResolver } from "@hookform/resolvers/yup";
 import { FaImage } from "react-icons/fa";
-import { companyForm } from "../../schemas/edit-company.schema";
+import { companyForm } from "@/schemas/edit-company.schema";
 import Page from "@/components/Page";
 import {
   Button,
@@ -15,9 +15,9 @@ import {
   Text,
   Heading,
   Divider,
-  Image,
   Textarea,
-  Box
+  Box,
+  Image
 } from "@chakra-ui/react";
 
 interface FormValues {
@@ -63,22 +63,24 @@ const CompanyForm = () => {
                 </FormControl>
 
                 <FormControl>
-                  <FormLabel>Logo</FormLabel>
-                  <Text fontSize="xs" color="gray.500">
-                    Formatos de imagen permitidos: SVG, PNG y JPG.
-                  </Text>
-                  {imageSrc && <Image boxSize="150px" objectFit="cover" src={imageSrc} m={2} />}
-                  <Input
-                    type="file"
-                    id="logo"
-                    hidden
-                    {...register("imageUrl")}
-                    accept="image/x-png,image/gif,image/jpeg"
-                    onChange={(e) => handleImageChange(e)}
-                  />
-                  <Button rightIcon={<FaImage />} colorScheme="gray" size="sm" htmlFor="logo" as="label">
-                    Seleccionar Imagen
-                  </Button>
+                  <Stack>
+                    <FormLabel>Logo</FormLabel>
+                    <Text fontSize="xs" color="gray.500">
+                      Formatos de imagen permitidos: SVG, PNG y JPG.
+                    </Text>
+                    {imageSrc && <Image boxSize="150px" objectFit="cover" src={imageSrc} m={2} />}
+                    <Input
+                      type="file"
+                      id="logo"
+                      hidden
+                      {...register("imageUrl")}
+                      accept="image/x-png,image/gif,image/jpeg, image/svg+xml"
+                      onChange={(e) => handleImageChange(e)}
+                    />
+                    <Button rightIcon={<FaImage />} colorScheme="gray" size="sm" htmlFor="logo" as="label">
+                      Seleccionar Imagen
+                    </Button>
+                  </Stack>
                 </FormControl>
 
                 <FormControl isInvalid={!!errors.url}>

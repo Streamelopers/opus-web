@@ -60,7 +60,7 @@ const JobCard: FC<JobsCardProps> = ({ job }: JobsCardProps) => {
           </Center>
         </Center>
         <Box>
-          <NextLink href={`/job/${job.Id}`}>
+          <NextLink href={`/empleo/${job.Id}`}>
             <Link fontSize="x-large" color="blue.400">
               {job.Title}
             </Link>
