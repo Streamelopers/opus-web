@@ -26,29 +26,29 @@
     "prop-types": "^15.7.2",
     "react": "^17.0.2",
     "react-dom": "^17.0.2",
-    "react-hook-form": "^7.17.4",
+    "react-hook-form": "^7.17.5",
     "react-icons": "^4.3.1",
     "react-share": "^4.4.0",
-    "sass": "^1.43.2",
+    "sass": "^1.43.3",
     "yup": "^0.32.11",
     "yup-es": "^1.0.3"
   },
   "devDependencies": {
     "@types/faker": "^5.5.9",
-    "@types/node": "^16.11.1",
-    "@types/react": "^17.0.30",
-    "@typescript-eslint/eslint-plugin": "^5.0.0",
-    "@typescript-eslint/parser": "^5.0.0",
+    "@types/node": "^16.11.6",
+    "@types/react": "^17.0.33",
+    "@typescript-eslint/eslint-plugin": "^5.2.0",
+    "@typescript-eslint/parser": "^5.2.0",
     "eslint": "^8.0.1",
     "eslint-config-next": "^11.1.2",
     "eslint-config-prettier": "^8.3.0",
     "eslint-plugin-prettier": "^4.0.0",
     "eslint-plugin-react": "^7.26.1",
     "faker": "^5.5.3",
-    "husky": "^7.0.2",
-    "lint-staged": "^11.2.3",
+    "husky": "^7.0.4",
+    "lint-staged": "^11.2.6",
     "prettier": "^2.4.1",
     "typescript": "^4.4.4",
-    "webpack": "^5.58.2"
+    "webpack": "^5.60.0"
   }
 }
