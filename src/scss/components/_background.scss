@@ -1,0 +1,23 @@
+.bg-image {
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+.pattern-1 {
+  position: relative;
+  z-index: 0;
+  &:before {
+    content: "";
+    background-image: url(../../assets/image/patterns/pattern-1.png);
+    left: -30px;
+    top: -50%;
+    transform: rotate(-180deg);
+    position: absolute;
+    min-width: 100%;
+    min-height: 100%;
+    background-repeat: no-repeat;
+    width: 100%;
+    background-position: center;
+    opacity: 0.1;
+  }
+}

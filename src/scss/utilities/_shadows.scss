@@ -1,0 +1,9 @@
+
+/*~~~~~ Normal Shadows ~~~~~*/
+@each $key, $value in $gr-shadows {
+  .shadow-#{$key}{
+      box-shadow: $value;
+  }
+}
+
+

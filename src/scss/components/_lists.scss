@@ -1,0 +1,68 @@
+/* List components */
+.list-overlapped-icon{
+  display: flex;
+  li{
+    transition: transform .4s,left .4s;
+    will-change: transition;
+    transform: scale(1);
+    position: relative;
+    margin-left: 5px;
+    &:first-child{
+    z-index: 6;
+    }
+    @for $i from 0 through 5 {
+      &:nth-child(#{$i + 2}){
+        z-index: #{5 - $i};
+      }
+    }
+    @for $i from 0 through 5 {
+      &:nth-child(#{$i + 2}){
+        left: -#{20px * ($i + 1)};
+      }
+    }
+    
+    // &:hover{
+    //   // transform: scale(1.1);
+    //   z-index: 10;
+    //   left: 0px;
+    //   ~ li{
+    //    left: 0px;
+    //   }
+    // }
+  }
+}
+
+
+.filter-check-list{
+  a{
+    display: flex;
+    align-items: center;
+    color: map-get($theme-colors,'black-2') !important;;
+      @include dark-mode{
+        color: map-get($theme-colors,"white") !important;
+      }
+    font-size: 16px;
+    color: inherit;
+    &:before{
+      content:"\f0c8";
+      font-weight: 400;
+      font-family:"Font Awesome 5 Free";
+      display: inline-block;
+      color: $smoke;
+      margin-right: 11px;
+      margin-top: 2px;
+    }
+    &.clicked{
+      color: map-get($theme-colors,'black-2') !important;;
+      @include dark-mode{
+        color: map-get($theme-colors,"white") !important;
+      }
+      font-weight: 600;
+      &:before{
+        content:"\f14a";
+        font-weight: 900;
+        color: $primary;
+      }
+    }
+  }
+}

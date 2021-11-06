@@ -1,0 +1,154 @@
+/*********** CSS TABLE OF CONTENTS *******************
+
+|--- 01.Component -> { Header }
+|--- 01.Component -> { Menu }
+|--- 01.Component -> { Button }
+|--- 01.Component -> { Lists }
+|--- 01.Component -> { Background }
+|--- 01.Component -> { Form }
+|--- 01.Component -> { Cards }
+|--- 01.Component -> { Modal }
+|--- 01.Component -> { Tab }
+|--- 01.Component -> { Acccordion }
+|--- 01.Component -> { Sidebar }
+|--- 02.Utility -> { Color }
+|--- 02.Utility -> { Flex }
+|--- 02.Utility -> { Grid }
+|--- 02.Utility -> { Shadows }
+|--- 02.Utility -> { Size }
+|--- 02.Utility -> { Borders }
+|--- 02.Utility -> { Common }
+|--- 02.Utility -> { Tablet }
+|--- 02.Utility -> { Typography }
+|--- 03.Theme Utility -> { Hovers }
+|--- 03.Theme Utility -> { Positioning }
+|--- 03.Theme Utility -> { Sizes }
+|--- 03.Theme Utility -> { Typograpy }
+|--- 03.Theme Utility -> { Gradient }
+|--- THEME CUSTOM STYLES
+
+******************************************************/
+
+
+
+@import "theme-mode-control/theme-mode-activation";
+@import "controls/theme-functions";
+@import "controls/theme-variables";
+@import "controls/theme-media-query";
+@import "controls/theme-mixins";
+
+//Bootstrap Required
+@import "bootstrap/functions";
+@import "bootstrap/variables";
+@import "bootstrap/mixins";
+/* ---------------------------
+  01.Component -> { Header } 
+------------------------------*/
+@import "components/header";
+/* ---------------------------
+  01.Component -> { Menu } 
+------------------------------*/
+@import "components/menu";
+/* ---------------------------
+  01.Component -> { Button } 
+------------------------------*/
+@import "components/button";
+/* ---------------------------
+  01.Component -> { Lists } 
+------------------------------*/
+@import "components/lists";
+/* ---------------------------
+  01.Component -> { Background } 
+------------------------------*/
+@import "components/background";
+/* ---------------------------
+  01.Component -> { Form } 
+------------------------------*/
+@import "components/form";
+/* ---------------------------
+  01.Component -> { Cards } 
+------------------------------*/
+@import "components/cards";
+/* ---------------------------
+  01.Component -> { Modal } 
+------------------------------*/
+@import "components/modal";
+/* ---------------------------
+  01.Component -> { Tab } 
+------------------------------*/
+@import "components/tabs";
+/* ---------------------------
+  01.Component -> { Acccordion } 
+------------------------------*/
+@import "components/accordion";
+/* ---------------------------
+  01.Component -> { Sidebar } 
+------------------------------*/
+@import "components/sidebars";
+/* ---------------------------
+  02.Utility -> { Color } 
+------------------------------*/
+@import "utilities/color";
+/* ---------------------------
+  02.Utility -> { Flex } 
+------------------------------*/
+@import "utilities/flex";
+/* ---------------------------
+  02.Utility -> { Grid } 
+------------------------------*/
+@import "utilities/grid";
+/* ---------------------------
+  02.Utility -> { Shadows } 
+------------------------------*/
+@import "utilities/shadows";
+/* ---------------------------
+  02.Utility -> { Size } 
+------------------------------*/
+@import "utilities/size";
+/* ---------------------------
+  02.Utility -> { Borders } 
+------------------------------*/
+@import "utilities/borders";
+/* ---------------------------
+  02.Utility -> { Common } 
+------------------------------*/
+@import "utilities/common";
+/* ---------------------------
+  02.Utility -> { Tablet } 
+------------------------------*/
+@import "utilities/tables";
+/* ---------------------------
+  02.Utility -> { Typography } 
+------------------------------*/
+@import "utilities/typography";
+/* ---------------------------
+  03.Theme Utility -> { Hovers } 
+------------------------------*/
+@import "theme-utilities/hovers";
+/* ---------------------------
+  03.Theme Utility -> { Positioning } 
+------------------------------*/
+@import "theme-utilities/positioning";
+/* ---------------------------
+  03.Theme Utility -> { Sizes } 
+------------------------------*/
+@import "theme-utilities/size";
+/* --------------------------------
+  03.Theme Utility -> { Typograpy } 
+-----------------------------------*/
+@import "theme-utilities/typography";
+/* ---------------------------------
+  03.Theme Utility -> { Gradient } 
+------------------------------------*/
+@import "theme-utilities/gradient";
+/* 
+---------------------------------
+-------> THEME CUSTOM STYLES 
+---------------------------------
+*/
+@import "theme-custom-styles";
+
+
+
+
+

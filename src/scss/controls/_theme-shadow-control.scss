@@ -1,0 +1,29 @@
+$shadow-1  : 20px 20px 40px rgba(175, 175, 175, 0.16);
+$shadow-2  : 17px 26px 99px rgba(114, 114, 114, 0.16);
+$shadow-3  : 0 29px 62px rgba(130, 130, 130, 0.16);
+$shadow-4  : 16px 41px 89px rgba(129, 129, 129, 0.16); //used in landing-1 hero form
+$shadow-5  : 0 40px 60px rgba(0, 0, 0, 0.08);
+$shadow-6  : 0 13px 16px rgba(0, 0, 0, 0.08);
+$shadow-7  : 0 29px 75px rgba(156, 156, 156, 0.16);
+$shadow-8  : 2px 2px 4px rgba(130, 130, 130, 0.16);
+$shadow-9  : 0 10px 35px rgba(178, 178, 178, 0.16);
+$shadow-10 : 5px 5px 10px rgba(0, 176, 116, 0.16);
+$shadow-blue : 15px 15px 30px rgba(72, 133, 250, 0.2);
+$shadow-green : 15px 15px 30px rgba(38, 193, 149, 0.2);
+$shadow-casablanca : 15px 15px 30px rgba(248, 197, 70, 0.2);
+
+
+$gr-shadows: (
+  1           : $shadow-1,
+  2           : $shadow-2,
+  4           : $shadow-4,
+  5           : $shadow-5,
+  6           : $shadow-6,
+  7           : $shadow-7,
+  8           : $shadow-8,
+  9           : $shadow-9,
+  10          : $shadow-10,
+  blue        : $shadow-blue,
+  green       : $shadow-green,
+  casablanca  : $shadow-casablanca
+);

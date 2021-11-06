@@ -1,0 +1,117 @@
+/*~~~~~~~~~~~~~~~~
+  All Hover Effects
+~~~~~~~~~~~~~~~~~~~~~~~*/
+.hover-shadow-1 {
+  transition: .4s;
+
+  &:hover {
+    box-shadow: $shadow-1;
+  }
+}
+
+.hover-shadow-2 {
+  transition: .4s;
+
+  &:hover {
+    border: 1px solid transparent !important;
+    box-shadow: $shadow-5;
+  }
+}
+
+/* used in featured job homepage-2 */
+.hover-shadow-3 {
+  transition: .4s;
+
+  &:hover {
+    // border: 1px solid transparent !important;
+    box-shadow: $shadow-5;
+  }
+}
+
+.hover-shadow-hitgray {
+  transition: .4s;
+
+  &:hover {
+    box-shadow: $shadow-3;
+  }
+}
+
+a.bg-white:hover,
+a.bg-white:focus,
+button.bg-white:hover,
+button.bg-white:focus {
+  transition: 0.4s;
+
+  &:hover {
+    background-color: $white !important;
+  }
+}
+
+
+a.hover-color-primary {
+  transition: .4s color;
+
+  &:hover {
+    color: $primary !important;
+  }
+}
+.hover-bg-green,
+a.hover-bg-green {
+  transition: .4s color;
+
+  &:hover {
+    color: $white !important;
+    background-color: $green !important;
+  }
+}
+.hover-text-hitgray,
+a.hover-text-hitgray {
+  transition: .4s color;
+
+  &:hover {
+    color: $hit-gray !important;
+  }
+}
+
+.hover-border-green{
+  border: 2px solid transparent;
+  &:hover{
+    border: 2px solid $green;
+  }
+}
+
+.list-hover-primary {
+  a {
+    transition: .4s color;
+
+    &:hover {
+      color: $primary !important;
+    }
+  }
+}
+
+.tab-menu-items a{
+  transition: 0.4s;
+  border-bottom: 2px solid transparent;
+  &:hover,
+  &.active {
+    border-bottom: 2px solid $green;
+    color: $green;
+  }
+}
+.pagination{
+  &.page-link{
+    &.active{
+      background: transparent;
+      color: $primary!important;
+    }
+  }
+}
+.pagination-hover-primary{
+  .page-link{
+    &:hover{
+      background: transparent;
+      color: $primary!important;
+    }
+  }
+}

@@ -1,0 +1,386 @@
+// Temporary custom css added.. I will remove later @omi mama...
+
+.btn-h-60 {
+  // this class will remove from here later when "Omi mama" will create new size... used in cta section button
+  height: 60px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.table-responsive {
+  padding-left: 1px;
+  padding-right: 1px;
+}
+
+/* ----------------------------
+  Hero Form 1
+------------------------------*/
+.filter-search-form-1 {
+  .nice-select {
+    .current {
+      width: calc(100% - 35px);
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      line-height: 1.2;
+    }
+    .list {
+      min-width: 290px;
+    }
+  }
+}
+/* ----------------------------
+  Search list 1
+------------------------------*/
+.filter-search-form-2.search-1-adjustment,
+.search-filter.search-1-adjustment {
+  .nice-select {
+    .current {
+      width: calc(100% - 35px);
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      line-height: 1.2;
+    }
+    .list {
+      min-width: 290px;
+    }
+  }
+}
+
+// masonry css added newly for responsive
+.card-columns {
+  // used in Landing-3 content-2 section masonry
+  @include media-breakpoint-only(lg) {
+    column-count: 4;
+  }
+
+  @include media-breakpoint-only(xl) {
+    column-count: 5;
+  }
+}
+
+// Testimonial
+.testimonial-slider-one {
+  position: relative;
+
+  .slick-dots {
+    position: absolute;
+    left: 0;
+    bottom: -68px;
+    padding: 0;
+    margin: 0 auto;
+    text-align: center;
+    width: 100%;
+
+    li {
+      display: inline-block;
+      width: 12px;
+      height: 12px;
+      background-color: rgba($white, 0.13);
+      margin: 3px;
+      border-radius: 50%;
+      transition: 0.4s;
+
+      &.slick-active {
+        background-color: $green;
+      }
+
+      button {
+        opacity: 0;
+      }
+    }
+  }
+}
+
+/*~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    Hero Area Custom Styles
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
+
+.hero-image-positioning-2 {
+  @include desktops {
+    transform: translateX(40%) scale(0.7);
+  }
+
+  @include large-desktops {
+    transform: translateX(50%) scale(1);
+  }
+
+  .single-image {
+    overflow: hidden;
+    border-radius: 8px;
+
+    @include desktops {
+      max-height: 700px;
+    }
+
+    img {
+      width: 100%;
+
+      @include desktops {
+        width: auto;
+        height: 100%;
+      }
+    }
+  }
+}
+
+// custom css added for rotate an item
+
+.rotate-n10 {
+  transform: rotate(-10deg);
+}
+
+// custom css Added for border
+.border-10 {
+  border-style: solid;
+  border-width: 10px;
+}
+
+.border-hit-gray-opacity-5 {
+  border-color: rgba($hit-gray, 0.5);
+}
+
+// Landing-2 Pricing Section Recomended pricing's border top custom css is here
+.recomended-pricing {
+  position: relative;
+
+  &:before {
+    position: absolute;
+    content: "";
+    left: 2px;
+    top: 0px;
+    width: 99%;
+    height: 5px;
+    background: #336ef7;
+    border-radius: 0px 0px 10px 10px;
+  }
+}
+
+/* Featured Card 3 title exerpt */
+.f03-title-exerpt {
+  white-space: nowrap;
+  width: 242px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+/* Gallery Image */
+
+.gallery {
+  display: flex;
+  flex-wrap: wrap;
+
+  .single-item {
+    max-width: 20%;
+    width: 20%;
+
+    // @include tablet{
+    //   max-width: 10%;
+    //   width: 10%;
+    // }
+    // @include desktops{
+    //   max-width: 20%;
+    //   width: 20%;
+    // }
+    img {
+      width: 100%;
+    }
+  }
+}
+
+/* OR devider */
+.or-devider {
+  text-align: center;
+  position: relative;
+  z-index: 1;
+
+  &:before {
+    content: "";
+    height: 1px;
+    width: 100%;
+    top: 50%;
+    left: 0%;
+    margin-top: 1.5px;
+    position: absolute;
+    background: var(--border-color);
+    z-index: -1;
+  }
+
+  span {
+    display: inline-block;
+    background: white;
+    padding: 15px 25px;
+  }
+}
+
+/*/------ Dashboard Adjustment Styles ------/*/
+
+.dashboard-main-container {
+  @include tablet {
+    padding-left: 290px;
+  }
+  @include extra-large-desktops {
+    max-width: calc(100% - 290px);
+    margin-left: auto;
+    padding-left: 75px;
+    padding-right: 75px;
+  }
+}
+
+// Checkbox
+
+.checkbox-bg-primary {
+  input[type="checkbox"] + label:before {
+    background-color: red;
+  }
+}
+
+.search-filter {
+  .nice-select .list {
+    width: auto;
+  }
+}
+// Bar Chart
+
+.slider-price {
+  input {
+    background: transparent;
+    border: transparent;
+    color: #1a1f2b;
+    text-align: left;
+    word-spacing: 0;
+  }
+}
+
+// Range bar
+
+.ui-slider-horizontal {
+  margin-top: 5px;
+  height: 5px;
+}
+.ui-state-default,
+.ui-widget-content .ui-state-default,
+.ui-widget-header .ui-state-default,
+.ui-button,
+html .ui-button.ui-state-disabled:hover,
+html .ui-button.ui-state-disabled:active {
+  border: none;
+  background: #fff;
+  font-weight: normal;
+  color: #454545;
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  outline: none;
+}
+.ui-slider-horizontal .ui-slider-handle {
+  top: -10px;
+}
+.ui-widget.ui-widget-content {
+  border: none;
+}
+.pm-range-slider {
+  min-width: 290px;
+  max-width: 290px;
+  background: $conch;
+  .ui-widget-header {
+    background: $primary;
+    top: 0;
+    height: 100%;
+  }
+}
+
+.graph {
+  min-width: 290px;
+  max-width: 290px;
+  left: 0;
+  top: 14px;
+
+  @include desktops {
+    // left: -55px;
+    top: 12px;
+  }
+  @include large-desktops {
+    // left: -30px;
+    top: 16px;
+  }
+
+  span {
+    width: 16px;
+    height: 60px;
+    background-color: $conch;
+    &:nth-child(1) {
+      height: 10px;
+    }
+    &:nth-child(2) {
+      height: 14px;
+    }
+    &:nth-child(3) {
+      height: 14px;
+    }
+    &:nth-child(4) {
+      height: 19px;
+    }
+    &:nth-child(5) {
+      height: 27px;
+    }
+    &:nth-child(6) {
+      height: 41px;
+    }
+    &:nth-child(7) {
+      height: 50px;
+    }
+    &:nth-child(8) {
+      height: 37px;
+    }
+    &:nth-child(9) {
+      height: 60px;
+    }
+    &:nth-child(10) {
+      height: 27px;
+    }
+    &:nth-child(11) {
+      height: 19px;
+    }
+    &:nth-child(12) {
+      height: 27px;
+    }
+    &:nth-child(13) {
+      height: 14px;
+    }
+  }
+}
+.overflow-y-scroll {
+  overflow-y: scroll;
+  overflow-x: hidden;
+}
+
+// Scroll Bar
+
+* {
+  scrollbar-width: thin;
+  scrollbar-color: $mercury;
+}
+*::-webkit-scrollbar {
+  width: 10px;
+}
+
+*::-webkit-scrollbar-thumb {
+  background-color: $mercury;
+  border-radius: 46px;
+}
+
+.active-item-black {
+  color: $primary;
+}
+
+.result-view-type {
+  a {
+    color: map-get($theme-colors, "hit-gray");
+    &.active {
+      color: map-get($theme-colors, "black-2");
+    }
+  }
+}
