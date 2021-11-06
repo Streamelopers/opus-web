@@ -1,0 +1,108 @@
+.dashboard-sidebar-wrapper {
+  width: 290px;
+  height: 100vh;
+  position: fixed;
+  left: 0;
+  top: 0;
+  background: var(--bg);
+  transform: translateX(-100%);
+  transition: 0.4s transform;
+  z-index: 800;
+  @include tablet {
+    transform: none;
+  }
+  &.show {
+    transform: translateX(0%);
+  }
+}
+.dashboard-layout-sidebar {
+  li {
+    a {
+      color: map-get($theme-colors, "gray");
+      @include dark-mode {
+        color: map-get($theme-colors, "white");
+      }
+      position: relative;
+      transition: 0.4s;
+      &:before {
+        content: "";
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 4px;
+        height: 100%;
+        background: $primary;
+        border-radius: 7px;
+        transform: scaleY(0);
+        will-change: transform;
+        transition: 0.4s;
+      }
+      i {
+        transition: 0.4s;
+        color: map-get($theme-colors, "conch");
+        @include dark-mode {
+          color: rgba($conch, 0.5);
+        }
+      }
+      @include desktops {
+        &:hover {
+          color: map-get($theme-colors, "black");
+          @include dark-mode {
+            color: rgba($conch, 0.5);
+          }
+          > i {
+            color: $primary;
+          }
+          &:before {
+            transform: scaleY(1);
+          }
+        }
+      }
+    }
+    & {
+      a.active {
+        color: map-get($theme-colors, "black");
+        @include dark-mode {
+          color: rgba($conch, 0.5);
+        }
+        > i {
+          color: $primary;
+        }
+        &:before {
+          transform: scaleY(1);
+        }
+      }
+    }
+  }
+}
+
+.sidebar-mobile-button {
+  min-height: 30px;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  font-size: 16px;
+  font-weight: 600;
+  z-index: 801;
+  background: $primary;
+  color: #fff !important;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  @include tablet {
+    transform: translateY(100%);
+  }
+  &:after {
+    content: "Sidebar Open";
+    margin-left: 10px;
+  }
+  &[aria-expanded="true"] {
+    &:after {
+      content: "Sidebar Close";
+    }
+  }
+}

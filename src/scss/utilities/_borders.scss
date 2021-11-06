@@ -1,0 +1,33 @@
+@each $name,$value in $gr-border-radius{
+  .rounded-#{$name}{
+    border-radius: $value;
+  }
+  .rounded-top-#{$name}{
+    border-top-left-radius: $value;
+    border-top-right-radius: $value;
+  }
+  .rounded-bottom-#{$name}{
+    border-bottom-left-radius: $value;
+    border-bottom-right-radius: $value;
+  }
+  .rounded-left-#{$name}{
+    border-top-left-radius: $value;
+    border-bottom-left-radius: $value;
+  }
+  .rounded-right-#{$name}{
+    border-top-right-radius: $value;
+    border-bottom-right-radius: $value;
+  }
+
+} 
+
+// Border Widths
+.border-width-1{
+  border-width: 1px!important;
+}
+.border-width-2{
+  border-width: 2px!important;
+}
+.border-width-3{
+  border-width: 3px!important;
+}

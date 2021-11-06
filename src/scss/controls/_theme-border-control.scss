@@ -1,0 +1,26 @@
+// Allows for customizing button radius independently from global border radius
+$border-radius-xs: 3px; //custom
+$border-radius-sm: 0.3125rem; //5px (bootstrap provided variable)
+$border-radius-md: 0.5rem; //8px custom
+$border-radius: 0.625rem; //10px (bootstrap provided variable)
+$border-radius-lg: 0.625rem; //10px (bootstrap provided variable)
+$border-radius-xl: 1.25rem; //20px  custom
+
+//--------------------------------------------------------------------------------------------------------------
+//--> use this format in the array to generate custom border radius class. EG: gr-rounded-{your-key}
+//-------------------------------------------------------------------------------------------------------------
+// 1 : 5px,
+// 2 : 8px,
+// 3 : 10px,
+// 4 : 15px,
+$gr-border-radius: (
+  xs: $border-radius-xs,
+  md: $border-radius-md,
+  xl: $border-radius-xl,
+  0: 0,
+  3: 3px,
+  5: 5px,
+  6: 6px,
+  8: 8px,
+  4: 10px,
+);

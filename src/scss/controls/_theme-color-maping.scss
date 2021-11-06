@@ -1,0 +1,77 @@
+
+$theme-colors: () ;
+$theme-colors: map-merge(
+  (
+    "primary"     :   $primary,
+    "secondary"   :   $secondary,
+    "white"       :   $white,
+    "green"       :   $green,
+    "blue"        :   $blue,
+    "eastern"     :   $eastern-blue,
+    "denim"       :   $denim-blue,
+    "dodger"      :   $dodger-blue,
+    "dodger-2"    :   $dodger-blue-2,
+    "spray"       :   $spray-blue,
+    "turquoise"   :   $turquoise-blue,
+    "regent"      :   $regent-blue,
+    "coral"       :   $coral,
+    "orange"      :   $orange,
+    "orange-2"    :   $outrageous-orange,
+    "red"         :   $red,
+    "red-2"       :   $red-2,
+    "yellow"      :   $yellow,
+    "yellow-2"    :   $sun-yellow,
+    "casablanca"  :   $casablanca,
+    "indigo"      :   $indigo,
+    "shamrock"    :   $shamrock,
+    "black"       :   $black,
+    "black-2"     :   $space-black,
+    "gray"        :   $nevada-gray,
+    "smoke"       :   $smoke,
+    "pink"        :   $pink,
+    "violet"      :   $violet,
+    "mercury"     :   $mercury,
+    "ebony-clay"  :   $ebony-clay,  // newly added
+    "hit-gray"    :   $hit-gray,  // newly added
+    "gallery"     :   $gallery , // newly added
+    "squeeze"     :   $squeeze , // newly added
+    "helio"       :   $heliotrope , // newly added
+    "athens"      :   $athens-gray,  // newly added
+    "concrete"    :   $concrete,
+    "allports"    :   $allports,
+    "marino"      :   $marino,
+    "poppy"       :   $poppy,
+    "polar"       :   $polar,
+    "egg-blue"    :   $egg-blue,
+    "conch"       :   $conch
+    
+
+  ),
+  $theme-colors
+);
+
+
+//-------------------------
+//-- Opacity Values
+//-------------------------
+$gr-opacity: ();
+$gr-opacity: map-merge(
+  (
+    visible : 1,
+    1 : .1,
+    15 : .15,
+    2 : .2,
+    3 : .3,
+    4 : .4,
+    5 : .5,
+    6 : .6,
+    p6 : .06,
+    7 : .7,
+    8 : .8,
+    9 : .9
+  ),
+  $gr-opacity
+);
+
+
+

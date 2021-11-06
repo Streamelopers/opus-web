@@ -1,0 +1,87 @@
+/*=== Media Query ===*/
+// Screen Width
+$screen-xxs: 320px;
+$screen-xs: 480px;
+$screen-sm: 576px;
+$screen-md: 768px;
+$screen-lg: 992px;
+$screen-xl: 1200px;
+$screen-xxl: 1366px;
+$screen-xxxl: 1600px;
+
+@mixin brk-point($mw) {
+    @media(min-width: $mw) {
+        @content;
+    }
+}
+@mixin mobile-xs {
+    @media(min-width: $screen-xxs) {
+        @content;
+    }
+}
+
+@mixin mobile {
+    @media(min-width: $screen-xs) {
+        @content;
+    }
+}
+
+@mixin mobile-lg {
+    @media(min-width: $screen-sm) {
+        @content;
+    }
+}
+@mixin mobile-lg-only {
+    @media(min-width: $screen-sm) and (max-width:$screen-md) {
+        @content;
+    }
+}
+
+@mixin tablet {
+    @media(min-width: $screen-md) {
+        @content;
+    }
+}
+
+@mixin desktops {
+    @media(min-width: $screen-lg) {
+        @content;
+    }
+}
+
+@mixin desktops-only {
+    @media(min-width: $screen-lg) and (max-width:$screen-xl) {
+        @content;
+    }
+}
+@mixin till-desktop {
+    @media(min-width: $screen-xxs) and (max-width:$screen-lg) {
+        @content;
+    }
+}
+
+@mixin large-desktops {
+    @media(min-width: $screen-xl) {
+        @content;
+    }
+}
+
+@mixin large-desktops-mid {
+    @media(min-width: $screen-xxl) {
+        @content;
+    }
+}
+
+@mixin extra-large-desktops {
+    @media(min-width: $screen-xxxl) {
+        @content;
+    }
+}
+
+@mixin section-padding{
+    padding: 50px 0;
+    @include tablet {
+        padding: 120px 0;
+
+    }
+}

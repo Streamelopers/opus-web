@@ -1,0 +1,88 @@
+/* Theme Size Utilities */
+.min-h-100vh {
+  min-height: 100vh;
+}
+.max-width-130px{
+  max-width: 130px;
+}
+.max-height-px-18{
+  max-height: 18px;
+}
+.min-height-32{
+  min-height: 32px;
+}
+.min-width-px-70{
+  min-width: 70px;
+}
+.min-width-px-80{
+  min-width: 80px;
+}
+.min-width-px-96{
+  min-width: 96px;
+}
+.min-width-px-100{
+  min-width: 100px;
+}
+.min-width-px-110{
+  min-width: 110px;
+}
+.min-width-px-125{
+  min-width: 125px;
+}
+.min-width-px-135{
+  min-width: 135px;
+}
+.min-width-px-155{
+  min-width: 155px;
+}
+.min-width-px-170{
+  min-width: 170px;
+}
+.min-width-px-185{
+  min-width: 185px;
+}
+.min-width-px-205{
+  min-width: 205px;
+}
+.min-width-px-235{
+  min-width: 235px;
+}
+.min-width-px-210{
+  min-width: 210px;
+}
+.min-width-px-273{
+  min-width: 273px;
+}
+.max-width-px-311{
+  max-width: 311px;
+}
+.max-width-px-840{
+  max-width: 840px;
+}
+
+.scale-xs-1{
+  @include mobile{
+    transform: scale(1)!important;
+  }
+}
+.scale-p7{
+  transform: scale(.7);
+}
+
+.h-1173{
+  height: 1173px;
+}
+.h-1413{
+  height: 1413px;
+}
+.min-height-px-18{
+  min-height: 18px;
+}
+.pb-custom-300{
+  @include brk-point(1366px){
+    padding-bottom: 300px !important;
+  }
+  @include extra-large-desktops{
+    padding-bottom: 130px !important;
+  }
+}

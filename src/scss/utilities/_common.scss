@@ -1,0 +1,56 @@
+span,a{
+  display: inline-block;
+}
+.line-height-reset{
+  line-height: 1;
+}
+
+
+// Z-Index Common
+.z-index-1{
+  z-index: 1;
+}
+.z-index-2{
+  z-index: 2;
+}
+.z-index-3{
+  z-index: 3;
+}
+.z-index-4{
+  z-index: 4;
+}
+.z-index-5{
+  z-index: 5;
+}
+.z-index-9 {
+  z-index: 9;
+}
+.z-index-supper {
+  z-index: 800;
+}
+.z-index-supper-duper {
+  z-index: 10000;
+}
+.z-index-n1{
+  z-index: -1;
+}
+.z-index-n2{
+  z-index: -2;
+}
+.z-index-lower{
+  z-index: -9999;
+}
+
+
+/* Focus Reset */
+
+.focus-reset{
+  &:focus{
+    box-shadow: none;
+    outline: none;
+  }
+}
+
+.table-y-middle{
+  vertical-align: middle!important;
+}
