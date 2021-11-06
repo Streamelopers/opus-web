@@ -1,0 +1,1 @@
+{"ast":null,"code":"export { default } from \"./ProfileSidebar\";","map":{"version":3,"sources":["/Users/rarepz/Desktop/dev.nosync/fork-opus/opus-web/src/components/ProfileSidebar/index.js"],"names":["default"],"mappings":"AAAA,SAASA,OAAT,QAAwB,kBAAxB","sourcesContent":["export { default } from \"./ProfileSidebar\";\n"]},"metadata":{},"sourceType":"module"}

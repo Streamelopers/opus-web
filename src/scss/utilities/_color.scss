@@ -1,0 +1,57 @@
+@each $color, $value in $theme-colors{
+
+  @each $op-key,$op-value in $gr-opacity{
+    .bg-#{$color}-opacity-#{$op-key}{
+      background-color: rgba($value,$op-value);
+    }
+  }
+  @each $op-key,$op-value in $gr-opacity{
+    .gr-color-#{$color}-opacity-#{$op-key}{
+      color: rgba($value,$op-value);
+    }
+  }
+  
+}
+@each $op-key,$op-value in $gr-opacity{
+  .gr-opacity-#{$op-key}{
+    opacity:$op-value;
+  }
+}
+
+.gr-fill-color{
+  fill: var(--color-texts)!important;;
+}
+
+.bg-default{
+  background: var(--bg);
+  &-1{
+    background: var(--bg-1);
+  }
+  &-2{
+    background: var(--bg-2);
+  }
+  &-3{
+    background: var(--bg-3);
+  }
+  &-4{
+    background: var(--bg-4);
+  }
+  &-5{
+    background: var(--bg-5);
+  }
+  &-6{
+    background: var(--bg-6);
+  }
+}
+
+.gr-fill-default-4{
+  fill:var(--bg-4);
+}
+
+.bg-opposite{
+  background: var(--bg-opposite);
+}
+
+.border-color-2{
+  border-color: var(--border-color-2);
+}

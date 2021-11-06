@@ -1,0 +1,170 @@
+
+
+
+@import 'theme-mode-mixins';
+
+
+
+// Mode activation
+$theme-mode-active: 'light';
+
+
+
+body[data-theme='dark'],.dark-bg,.dark-mode-texts{
+  @include dark-theme-mode;
+  
+}
+
+
+
+body[data-theme='light'],.light-bg,.light-mode-texts {
+ @include light-theme-mode;
+}
+
+
+
+// Setting The Default Theme Mode
+body{
+  @if $theme-mode-active == 'dark' {
+    @include dark-theme-mode;
+  } @else {
+    @include light-theme-mode;
+  }
+}
+
+.default-logo,.default-shape{
+  display: block;
+}
+
+
+.light-version-logo,.light-shape{
+  display: none;
+}
+.dark-version-logo,.dark-shape{
+  display: none;
+}
+.light-version-logo.default-logo{
+  display: block;
+}
+.dark-version-logo.default-logo{
+  display: block;
+}
+
+
+
+body[data-theme='dark'],.dark-mode-texts{
+  .dark-version-logo,.dark-shape{
+    display: block;
+  }
+  .light-version-logo{
+    display: none;
+    &.default-logo{
+      display: none;
+    }
+  }
+  .light-shape{
+    display: none;
+    &.default-shape{
+      display: none;
+    }
+  }
+  .light-mode-texts{
+    .light-version-logo,.light-shape{
+      display: block;
+    }
+    .dark-version-logo{
+      display: none;
+      &.default-logo{
+        display: none;
+      }
+    }
+    .dark-shape{
+      display: none;
+      &.default-shape{
+        display: none;
+      }
+    }
+  }
+}
+body[data-theme='light'],.light-mode-texts{
+  .light-version-logo,.light-shape{
+    display: block;
+  }
+  .dark-version-logo{
+    display: none;
+    &.default-logo{
+      display: none;
+    }
+  }
+  .dark-shape{
+    display: none;
+    &.default-shape{
+      display: none;
+    }
+  }
+
+
+  .dark-mode-texts{
+    .dark-version-logo,.dark-shape{
+      display: block;
+    }
+    .light-version-logo{
+      display: none;
+      &.default-logo{
+        display: none;
+      }
+    }
+    .light-shape{
+      display: none;
+      &.default-shape{
+        display: none;
+      }
+    }
+  }
+}
+
+
+
+
+.bg-default{
+  background: var(--bg);
+  &-1{
+    background: var(--bg);
+  }
+  &-2{
+    background: var(--bg-2);
+  }
+  &-3{
+    background: var(--bg-3);
+  }
+  &-4{
+    background: var(--bg-4);
+  }
+  &-5{
+    background: var(--bg-5);
+  }
+  &-6{
+    background: var(--bg-6);
+  }
+}
+
+.text-default-color{
+  color: var(--color-texts)
+}
+.text-default-color-2{
+  color: var(--color-texts-2)
+}
+
+.heading-default-color{
+  color: var(--color-headings)
+}
+
+.border-default-color{
+  border-color:var(--border-color)
+}
+.border-default-color-2{
+  border-color:var(--border-color-2) !important;
+}
+// .fill-default-color{
+//   color:
+// }

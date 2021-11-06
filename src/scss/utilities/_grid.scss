@@ -1,0 +1,20 @@
+.row-sm{
+  @include mobile-lg{
+    @include make-row();
+  }
+}
+.row-lg{
+  @include desktops{
+    @include make-row();
+  }
+}
+.row-md{
+  @include tablet{
+    @include make-row();
+  }
+}
+.row-xl{
+  @include large-desktops{
+    @include make-row();
+  }
+}

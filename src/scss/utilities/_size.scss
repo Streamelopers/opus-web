@@ -1,0 +1,50 @@
+/*~~~~~ Circle Sizes ~~~~~*/
+@each $size, $length in $circle-size {
+  .circle-#{$size}{
+    max-width: #{$length};
+    min-width: #{$length};
+    max-height: #{$length};
+    min-height: #{$length};
+    border-radius: 500px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    @if $size == "xs" {
+      font-size: 16px;
+    } @else if $size == "md"{
+      font-size: 18px;
+    } @else if $size == "lg"{
+      font-size: 28px;
+    }
+  }
+}
+
+/*~~~~~ Square Sizes ~~~~~*/
+@each $size in $gr-square-size {
+  .square-#{$size}{
+    max-width: #{$size}px;
+    min-width: #{$size}px;
+    max-height: #{$size}px;
+    min-height: #{$size}px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+}
+
+
+@if($responsive-size){
+  /*~~~~~ responsive width ~~~~~*/
+  @each $breakpoint in map-keys($grid-breakpoints) {
+    @include media-breakpoint-up($breakpoint) {
+      $infix: breakpoint-infix($breakpoint, $grid-breakpoints);
+      @if($infix != ''){
+        @each $prop, $abbrev in (width: w) {
+          @each $size, $length in $sizes {
+            .#{$abbrev}#{$infix}-#{$size} { #{$prop}: $length !important; }
+          }
+        }
+      }
+    }
+  }
+}

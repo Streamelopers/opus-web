@@ -1,0 +1,1 @@
+{"ast":null,"code":"export { default } from './Logo';","map":{"version":3,"sources":["/Users/rarepz/Desktop/dev.nosync/opus-web/src/components/Logo/index.js"],"names":["default"],"mappings":"AAAA,SAAQA,OAAR,QAAsB,QAAtB","sourcesContent":["export {default} from './Logo'\n"]},"metadata":{},"sourceType":"module"}

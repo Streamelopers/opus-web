@@ -1,0 +1,39 @@
+
+
+// Buttons
+//
+// Shared variables that are reassigned to `$input-` and `$btn-` specific variables.
+// For each of Bootstrap's buttons, define text, background, and border color.
+
+$btn-padding-y:               $input-btn-padding-y;
+$btn-padding-x:               $input-btn-padding-x;
+$btn-font-size:               $input-btn-font-size;
+$btn-line-height:             $input-btn-line-height;
+//$btn-white-space:             null; // Set to `nowrap` to prevent text wrapping
+
+$btn-padding-y-sm:            12px;
+$btn-padding-x-sm:            16px;
+$btn-font-size-sm:            13px;
+$btn-line-height-sm:          1;
+
+$btn-padding-y-lg:            12px;
+$btn-padding-x-lg:            16px;
+$btn-font-size-lg:            13px;
+$btn-line-height-lg:          1;
+
+
+
+$btn-font-weight:             700;
+$btn-box-shadow:              0;
+
+
+
+
+$btn-border-radius:           5px;
+$btn-border-radius-lg:        5px;
+$btn-border-radius-sm:        3px;
+
+$btn-transition:              .4s cubic-bezier(0.39, 0.575, 0.565, 1);
+
+// $btn-focus-box-shadow:        none!important;
+

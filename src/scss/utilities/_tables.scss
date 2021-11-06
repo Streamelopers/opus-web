@@ -1,0 +1,5 @@
+.table-striped {
+  tbody tr:nth-of-type(#{$table-striped-order}) {
+    background-color: map-get($theme-colors,"athens");
+  }
+}

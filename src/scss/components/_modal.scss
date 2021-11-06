@@ -1,0 +1,21 @@
+.modal.show {
+  .modal-dialog{
+    pointer-events: visible;
+  }
+}
+
+@media only screen and (min-height: 775px) {
+  .form-modal.modal{
+    align-items: center;
+    display: flex!important;
+    pointer-events: none;
+    &.show {
+      
+      pointer-events: visible;
+    }
+  }
+  // .modal-dialog{
+  //   margin-top: auto!important;
+  //   margin-bottom: auto!important;
+  // }
+}

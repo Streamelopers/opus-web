@@ -1,0 +1,1 @@
+{"ast":null,"code":"export { default } from \"./Offcanvas\";","map":{"version":3,"sources":["/Users/rarepz/Desktop/dev.nosync/fork-opus/opus-web/src/components/Offcanvas/index.js"],"names":["default"],"mappings":"AAAA,SAASA,OAAT,QAAwB,aAAxB","sourcesContent":["export { default } from \"./Offcanvas\";\n"]},"metadata":{},"sourceType":"module"}

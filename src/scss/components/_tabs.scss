@@ -1,0 +1,10 @@
+.search-nav-tab{
+  .active{
+    background-color: transparent!important;
+    border:0;
+    
+    > div{
+      border-color:$primary;
+    }
+  }
+}

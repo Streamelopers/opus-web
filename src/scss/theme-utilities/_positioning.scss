@@ -1,0 +1,159 @@
+.position-lg-static{
+  @include desktops{
+    position: static;
+  }
+}
+.position-md-absolute{
+  @include tablet{
+    position: absolute!important;
+  }
+}
+.position-lg-absolute{
+  position: static;
+  @include desktops{
+    position: absolute!important;
+  }
+}
+.pos-abs-md{
+  @include tablet{
+    position: absolute;
+  }
+}
+
+.pos-abs-lg {
+  @include desktops {
+    position: absolute!important;
+  }
+}
+.pos-abs-xl {
+  @include large-desktops {
+    position: absolute!important;
+  }
+}
+
+.pos-abs-lg-ly-center{
+  @include desktops {
+    position: absolute;
+    top: 50%;
+    left: 0;
+    transform: translateY(-50%);
+  }
+}
+
+.pos-abs-lg-ry-center{
+  @include desktops {
+    position: absolute;
+    top: 50%;
+    right: 0;
+    transform: translateY(-50%);
+  }
+}
+
+.pos-abs-tl {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+.pos-abs-tr {
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+
+.pos-abs-bl {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+}
+.pos-abs-br {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+}
+.pos-abs-cr {
+  position: absolute;
+  top: 50%;
+  right: 0;
+  transform: translateY(-50%);
+}
+.pos-lg-abs-c {
+  @include desktops{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+  }
+}
+.pos-abs-cl {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  transform: translateY(-50%);
+}
+.pos-xs-abs-cl {
+  @include mobile{
+    position: absolute;
+    top: 50%;
+    left: 0;
+    transform: translateY(-50%);
+  }
+}
+.pos-abs-center{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+}
+.pos-abs-br-custom {
+  position: absolute;
+  bottom: -50px;
+  right: -36px;
+}
+.pos-abs-bl-custom {
+  position: absolute;
+  bottom: -50px;
+  left: -36px;
+  z-index: -1;
+}
+
+.pos-abs-bl-custom-2 {
+  position: absolute;
+  left: 30px;
+  bottom: 28px;
+}
+
+.pos-abs-tl-custom {
+  position: absolute;
+  top: -6px;
+  left: 45px;
+}
+.pos-abs-tr-custom {
+  position: absolute;
+  top: -32px;
+  right: -38px;
+}
+
+
+
+// Left
+
+.left-lg-p20{
+  @include desktops{
+    left: 20%;
+  }
+}
+
+.translate-n50{
+  transform:translate(-50%,-50%);
+}
+.translateX-n50{
+  transform:translateX(-50%);
+}
+.translateY-50{
+  transform:translateY(50%);
+}
+
+.chart-postion {
+  top: 14px;
+  left: 3px;
+}
