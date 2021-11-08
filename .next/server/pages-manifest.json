@@ -1,1 +1,23 @@
-{"/_app":"static/development/pages/_app.js","/_document":"static/development/pages/_document.js","/_error":"static/development/pages/_error.js","/index":"static/development/pages/index.js","/":"static/development/pages/index.js"}
+{
+  "/404": "pages/404.html",
+  "/_app": "pages/_app.js",
+  "/_document": "pages/_document.js",
+  "/candidate-profile-2": "pages/candidate-profile-2.html",
+  "/candidate-profile": "pages/candidate-profile.html",
+  "/company-profile": "pages/company-profile.html",
+  "/contact": "pages/contact.html",
+  "/dashboard-applicants": "pages/dashboard-applicants.html",
+  "/dashboard-jobs": "pages/dashboard-jobs.html",
+  "/dashboard-main": "pages/dashboard-main.html",
+  "/dashboard-settings": "pages/dashboard-settings.html",
+  "/faq": "pages/faq.html",
+  "/": "pages/index.html",
+  "/job-details": "pages/job-details.html",
+  "/landing-2": "pages/landing-2.html",
+  "/landing-3": "pages/landing-3.html",
+  "/pricing": "pages/pricing.html",
+  "/search-grid": "pages/search-grid.html",
+  "/search-list-2": "pages/search-list-2.html",
+  "/search-list": "pages/search-list.html",
+  "/_error": "pages/_error.js"
+}
