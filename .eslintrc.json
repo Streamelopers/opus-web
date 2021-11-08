@@ -1,28 +1,25 @@
 {
-    "parser": "@typescript-eslint/parser",
-    "parserOptions": {
-      "ecmaVersion": 2020,
-      "sourceType": "module",
-      "ecmaFeatures": {
-        "jsx": true
-      }
-    },
-    "settings": {
-      "react": {
-        "version": "detect"
-      }
-    },
-    "plugins": ["prettier"],
     "extends": [
-      "plugin:prettier/recommended"
+        "eslint:recommended",
+        "plugin:prettier/recommended"
+    ],
+    "parserOptions": {
+        "ecmaFeatures": {
+            "jsx": true
+        },
+        "ecmaVersion": 2020,
+        "sourceType": "module"
+    },
+    "plugins": [
+        "prettier"
     ],
     "rules": {
-      // Place to specify and overwrite ESLint rules
-      "prettier/prettier": "error",
-      "@typescript-eslint/explicit-function-return-type": "off",
-      "@typescript-eslint/explicit-module-boundary-types": "off",
-      "@typescript-eslint/ban-ts-comment": "off",
-      "react/react-in-jsx-scope": "off",
-      "react/prop-types": "off"
+        "prettier/prettier": "error",
+        "@typescript-eslint/explicit-function-return-type": "off",
+        "@typescript-eslint/explicit-module-boundary-types": "off",
+        "@typescript-eslint/ban-ts-comment": "off",
+        "react/react-in-jsx-scope": "off",
+        "react/prop-types": "off",
+        "no-unused-vars": "off"
     }
 }
