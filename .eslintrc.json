@@ -5,7 +5,8 @@
     },
     "extends": [
         "eslint:recommended",
-        "plugin:prettier/recommended"
+        "plugin:prettier/recommended",
+        "plugin:@next/next/recommended"
     ],
     "parserOptions": {
         "ecmaFeatures": {
@@ -24,6 +25,8 @@
         "@typescript-eslint/ban-ts-comment": "off",
         "react/react-in-jsx-scope": "off",
         "react/prop-types": "off",
-        "no-unused-vars": "off"
+        "no-unused-vars": "off",
+        "@next/next/no-img-element": "off",
+        "@next/next/no-html-link-for-pages": "off"
     }
 }
