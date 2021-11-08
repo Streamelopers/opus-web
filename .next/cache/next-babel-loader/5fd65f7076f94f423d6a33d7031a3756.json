@@ -1,1 +1,0 @@
-{"ast":null,"code":"export { default } from \"./ModalSignIn\";","map":{"version":3,"sources":["/Users/rarepz/Desktop/dev.nosync/opus-web/src/components/ModalSignIn/index.js"],"names":["default"],"mappings":"AAAA,SAASA,OAAT,QAAwB,eAAxB","sourcesContent":["export { default } from \"./ModalSignIn\";\n"]},"metadata":{},"sourceType":"module"}
