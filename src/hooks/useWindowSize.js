@@ -7,7 +7,7 @@ export const useWindowSize = () => {
   const getSize = useCallback(() => {
     return {
       width: isClient ? window.innerWidth : undefined,
-      height: isClient ? window.innerHeight : undefined
+      height: isClient ? window.innerHeight : undefined,
     };
   }, [isClient]);
 
@@ -20,7 +20,7 @@ export const useWindowSize = () => {
 
     const handleResize = () => {
       setWindowSize(getSize);
-    }
+    };
 
     window.addEventListener("resize", handleResize);
     return () => window.removeEventListener("resize", handleResize);

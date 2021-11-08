@@ -1,1 +1,0 @@
-{"ast":null,"code":"export { default } from './Layout';","map":{"version":3,"sources":["/Users/rarepz/Desktop/dev.nosync/opus-web/src/components/Layout/index.js"],"names":["default"],"mappings":"AAAA,SAASA,OAAT,QAAwB,UAAxB","sourcesContent":["export { default } from './Layout'"]},"metadata":{},"sourceType":"module"}

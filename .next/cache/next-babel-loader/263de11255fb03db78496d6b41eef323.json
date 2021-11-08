@@ -1,1 +1,0 @@
-{"ast":null,"code":"export { default } from \"./SidebarDashboard\";","map":{"version":3,"sources":["/Users/rarepz/Desktop/dev.nosync/fork-opus/opus-web/src/components/SidebarDashboard/index.js"],"names":["default"],"mappings":"AAAA,SAASA,OAAT,QAAwB,oBAAxB","sourcesContent":["export { default } from \"./SidebarDashboard\";\n"]},"metadata":{},"sourceType":"module"}
