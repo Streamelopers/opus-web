@@ -24,15 +24,6 @@ jobs:
         node-version: '${{ steps.nvm.outputs.NVMRC }}'
         registry-url: 'https://registry.npmjs.org'
 
-    - name: Cache Node.js modules
-      uses: actions/cache@v2
-      with:
-        path: ~/.npm
-        key: ${{ runner.OS }}-node-${{ hashFiles('**/package-lock.json') }}
-        restore-keys: |
-          ${{ runner.OS }}-node-
-          ${{ runner.OS }}-
-
     - name: Install dependencies
       run: npm i --force
 
