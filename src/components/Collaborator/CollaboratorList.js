@@ -1,6 +1,6 @@
-import React from 'react'
+import React from "react"
 
-import CollaboratorCard from './CollaboratorCard'
+import CollaboratorCard from "./CollaboratorCard"
 
 const CollaboratorList = ({collaborators}) => {
 
@@ -14,7 +14,7 @@ const CollaboratorList = ({collaborators}) => {
 
     return (
         <div>
-            <div className='row'>
+            <div className="row">
                 {renderCollaborators()}
             </div>
 

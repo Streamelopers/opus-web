@@ -1,7 +1,7 @@
-import React from 'react'
+import React from "react"
 
-import PageWrapper from '../components/PageWrapper'
-import CollaboratorList from '../components/Collaborator/CollaboratorList'
+import PageWrapper from "../components/PageWrapper"
+import CollaboratorList from "../components/Collaborator/CollaboratorList"
 
 const Collaborator = ({webCollaborators, apiCollaborators}) => {
 
@@ -10,11 +10,11 @@ const Collaborator = ({webCollaborators, apiCollaborators}) => {
         <PageWrapper>
             <div className="bg-default pt-md-30 pt-sm-25 pt-23 pb-md-27 pb-sm-20 pb-17">
                 <div className="container">
-                    <h3 className='mb-9'>Colaboradores del proyecto Web</h3>
+                    <h3 className="mb-9">Colaboradores del proyecto Web</h3>
                     <hr className="bg-light border-2 border-top border-light"/>
                     <CollaboratorList collaborators={webCollaborators}/>
 
-                    <h3 className='mt-9 mb-9'>Colaboradores del proyecto API</h3>
+                    <h3 className="mt-9 mb-9">Colaboradores del proyecto API</h3>
                     <hr className="bg-light border-2 border-top border-light"/>
                     <CollaboratorList collaborators={apiCollaborators}/>
               </div>
