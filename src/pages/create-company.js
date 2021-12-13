@@ -1,7 +1,6 @@
 import React from "react";
-import Link from "next/link";
 import PageWrapper from "../components/PageWrapper";
-// bg-white rounded-4 border border-mercury shadow-9
+
 const CreateCompany = () => {
   return (
     <>
