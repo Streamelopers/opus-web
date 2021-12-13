@@ -7,7 +7,7 @@ const CollaboratorList = ({collaborators}) => {
     const renderCollaborators = () => {
 
         return collaborators.map((collaborator) => (  
-            <div className="col-xl-6 col-md-6 pr-xl-15 mb-5">
+            <div key={collaborator.id} className="col-xl-4 col-md-4 mb-2">
                 <CollaboratorCard key={collaborator.id} collaborator={collaborator} />
             </div>))
     }
