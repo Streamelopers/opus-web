@@ -29,6 +29,13 @@ npm install
 # or
 npm install --force
 ```
+
+Copia el archivo `.env.example` y renombra la copia como `.env`
+
+```bash
+cp .env.example .env
+```
+
 ## Ejecutar el servidor de desarrollo
 
 ```bash
@@ -36,7 +43,10 @@ npm run dev
 # or
 yarn dev
 ```
+
+
 Abra [http://localhost:3000](http://localhost:3000) con su navegador para ver la aplicación funcionando.
+
 
 ## Aprende más
 
@@ -46,9 +56,3 @@ Para saber más sobre Next.js, eche un vistazo a los siguientes recursos:
 - [Aprende Next.js](https://nextjs.org/learn) - un tutorial interactivo de Next.js.
 
 Puedes consultar [el repositorio GitHub de Next.js](https://github.com/vercel/next.js/): ¡tus comentarios y contribuciones son bienvenidos!
-
-## Despliegue en Vercel
-
-La forma más sencilla de desplegar tu aplicación Next.js es utilizar la [Plataforma Vercel](https://vercel.com/import?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) de los creadores de Next.js.
-
-Consulta nuestra [documentación sobre el despliegue de Next.js](https://nextjs.org/docs/deployment) para obtener más detalles.
