@@ -2,9 +2,9 @@ name: Node.js CI
 
 on:
   push:
-    branches: [ main ]
+    branches: [ main, development ]
   pull_request:
-    branches: [ main ]
+    branches: [ main, development ]
 
 jobs:
   build:
@@ -41,3 +41,7 @@ jobs:
 
     - name: Run build
       run: npm run build
+      env:
+        API_URL: ${{ secrets.API_URL }}
+        COLLABORATORS_WEB_URL: ${{ secrets.COLLABORATORS_WEB_URL }}
+        COLLABORATORS_API_URL: ${{ secrets.COLLABORATORS_API_URL }}
