@@ -73,4 +73,8 @@ export const menuItems = [
     label: "Support",
     isExternal: true,
   },
+  {
+    name: "collaborator",
+    label: "Colaboradores",
+  },
 ];
