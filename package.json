@@ -12,7 +12,7 @@
     "lint:fix": "eslint --ext js,ts,tsx ./ --fix"
   },
   "dependencies": {
-    "@chakra-ui/react": "^1.6.12",
+    "@chakra-ui/react": "^1.8.6",
     "@emotion/react": "^11.5.0",
     "@emotion/styled": "^11.3.0",
     "@hookform/resolvers": "^2.8.3",
