@@ -55,7 +55,7 @@
     "@nuxtjs/dotenv": "^1.4.1",
     "@types/faker": "^5.5.9",
     "@types/node": "^16.11.26",
-    "@types/react": "^17.0.34",
+    "@types/react": "^17.0.43",
     "@typescript-eslint/eslint-plugin": "^5.3.0",
     "@typescript-eslint/parser": "^5.3.0",
     "babel-plugin-styled-components": "^1.13.3",
