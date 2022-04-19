@@ -31,7 +31,7 @@
     "react": "17.0.2",
     "react-bootstrap": "^2.0.2",
     "react-countdown": "^2.3.2",
-    "react-countup": "^6.1.0",
+    "react-countup": "^6.2.0",
     "react-day-picker": "^7.4.10",
     "react-dom": "17.0.2",
     "react-hook-form": "^7.27.1",
