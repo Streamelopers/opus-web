@@ -28,7 +28,7 @@
     "next-fonts": "^1.5.1",
     "polished": "^4.2.2",
     "prop-types": "^15.8.1",
-    "react": "17.0.2",
+    "react": "18.0.0",
     "react-bootstrap": "^2.2.3",
     "react-countdown": "^2.3.2",
     "react-countup": "^6.2.0",
