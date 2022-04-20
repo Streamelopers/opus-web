@@ -67,7 +67,7 @@
     "eslint-plugin-react": "^7.29.4",
     "faker": "^6.6.6",
     "husky": "^7.0.4",
-    "imagemin-mozjpeg": "^10.0.0",
+    "imagemin-mozjpeg": "^8.0.0",
     "lint-staged": "^12.3.8",
     "next-optimized-images": "^2.6.2",
     "prettier": "^2.6.2",
