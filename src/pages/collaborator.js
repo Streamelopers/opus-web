@@ -24,14 +24,12 @@ const Collaborator = ({ webCollaborators, apiCollaborators }) => {
 export default Collaborator;
 
 const getWebCollaborators = async () => {
-  console.log(process.env.COLLABORATORS_WEB_URL);
   const result = await fetch(process.env.COLLABORATORS_WEB_URL);
   const data = await result.json();
   return data;
 };
 
 const getApiCollaborators = async () => {
-  console.log(process.env.COLLABORATORS_API_URL);
   const result = await fetch(process.env.COLLABORATORS_API_URL);
   const data = await result.json();
   return data;
