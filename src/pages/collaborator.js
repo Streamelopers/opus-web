@@ -1,5 +1,4 @@
 import React from "react";
-import absoluteUrl from "next-absolute-url";
 
 import PageWrapper from "../components/PageWrapper";
 import CollaboratorList from "../components/Collaborator/CollaboratorList";
@@ -25,13 +24,13 @@ const Collaborator = ({ webCollaborators, apiCollaborators }) => {
 export default Collaborator;
 
 const getWebCollaborators = async () => {
-  const result = await fetch(absoluteUrl(process.env.COLLABORATORS_WEB_URL));
+  const result = await fetch(process.env.COLLABORATORS_WEB_URL);
   const data = await result.json();
   return data;
 };
 
 const getApiCollaborators = async () => {
-  const result = await fetch(absoluteUrl(process.env.COLLABORATORS_API_URL));
+  const result = await fetch(process.env.COLLABORATORS_API_URL);
   const data = await result.json();
   return data;
 };
