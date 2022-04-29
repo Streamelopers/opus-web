@@ -5298,9 +5298,9 @@ raw-loader@^2.0.0:
     loader-utils "^1.1.0"
     schema-utils "^1.0.0"
 
-react-bootstrap@^2.2.3:
-  version "2.3.0"
-  resolved "https://registry.npmjs.org/react-bootstrap/-/react-bootstrap-2.3.0.tgz"
+react-bootstrap@^2.3.1:
+  version "2.3.1"
+  resolved "https://registry.yarnpkg.com/react-bootstrap/-/react-bootstrap-2.3.1.tgz#f14239efb89ca24044766e20cc829b7a264db11d"
   dependencies:
     "@babel/runtime" "^7.17.2"
     "@restart/hooks" "^0.4.6"
