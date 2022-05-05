@@ -24,13 +24,17 @@ const Collaborator = ({ webCollaborators, apiCollaborators }) => {
 export default Collaborator;
 
 const getWebCollaborators = async () => {
-  const result = await fetch(process.env.COLLABORATORS_WEB_URL);
+  const result = await fetch(
+    "https://api.github.com/repositories/329978688/contributors"
+  );
   const data = await result.json();
   return data;
 };
 
 const getApiCollaborators = async () => {
-  const result = await fetch(process.env.COLLABORATORS_API_URL);
+  const result = await fetch(
+    "https://api.github.com/repositories/329980816/contributors"
+  );
   const data = await result.json();
   return data;
 };
