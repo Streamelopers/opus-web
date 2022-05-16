@@ -918,9 +918,9 @@
     prop-types "^15.7.2"
     tslib "^2.1.0"
 
-"@reach/auto-id@^0.16.0":
+"@reach/auto-id@0.16.0":
   version "0.16.0"
-  resolved "https://registry.npmjs.org/@reach/auto-id/-/auto-id-0.16.0.tgz"
+  resolved "https://registry.yarnpkg.com/@reach/auto-id/-/auto-id-0.16.0.tgz#dfabc3227844e8c04f8e6e45203a8e14a8edbaed"
   dependencies:
     "@reach/utils" "0.16.0"
     tslib "^2.3.0"
@@ -5329,11 +5329,11 @@ react-countup@^6.2.0:
   dependencies:
     countup.js "^2.1.0"
 
-react-day-picker@^8.0.4:
-  version "8.0.4"
-  resolved "https://registry.npmjs.org/react-day-picker/-/react-day-picker-8.0.4.tgz"
+react-day-picker@^8.0.5:
+  version "8.0.5"
+  resolved "https://registry.yarnpkg.com/react-day-picker/-/react-day-picker-8.0.5.tgz#079f21ebdc353b66a97ef4258062f27c10b55145"
   dependencies:
-    "@reach/auto-id" "^0.16.0"
+    "@reach/auto-id" "0.16.0"
 
 react-dom@18.0.0:
   version "18.0.0"
