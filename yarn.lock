@@ -1104,9 +1104,9 @@
   version "17.0.25"
   resolved "https://registry.npmjs.org/@types/node/-/node-17.0.25.tgz"
 
-"@types/node@^17.0.33":
-  version "17.0.33"
-  resolved "https://registry.yarnpkg.com/@types/node/-/node-17.0.33.tgz#3c1879b276dc63e73030bb91165e62a4509cd506"
+"@types/node@^17.0.34":
+  version "17.0.34"
+  resolved "https://registry.yarnpkg.com/@types/node/-/node-17.0.34.tgz#3b0b6a50ff797280b8d000c6281d229f9c538cef"
 
 "@types/parse-json@^4.0.0":
   version "4.0.0"
