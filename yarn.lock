@@ -1767,7 +1767,7 @@ braces@^2.3.1:
     split-string "^3.0.2"
     to-regex "^3.0.1"
 
-braces@^3.0.1, braces@~3.0.2:
+braces@^3.0.1, braces@^3.0.2, braces@~3.0.2:
   version "3.0.2"
   resolved "https://registry.npmjs.org/braces/-/braces-3.0.2.tgz"
   dependencies:
@@ -2133,9 +2133,9 @@ commander@^2.20.0, commander@^2.8.1:
   version "2.20.3"
   resolved "https://registry.npmjs.org/commander/-/commander-2.20.3.tgz"
 
-commander@^8.3.0:
-  version "8.3.0"
-  resolved "https://registry.npmjs.org/commander/-/commander-8.3.0.tgz"
+commander@^9.3.0:
+  version "9.3.0"
+  resolved "https://registry.yarnpkg.com/commander/-/commander-9.3.0.tgz#f619114a5a2d2054e0d9ff1b31d5ccf89255e26b"
 
 commondir@^1.0.1:
   version "1.0.1"
@@ -2370,7 +2370,7 @@ debug@^4.0.1, debug@^4.1.0, debug@^4.1.1, debug@^4.3.2:
   dependencies:
     ms "2.1.2"
 
-debug@^4.3.3, debug@^4.3.4:
+debug@^4.3.4:
   version "4.3.4"
   resolved "https://registry.yarnpkg.com/debug/-/debug-4.3.4.tgz#1319f6579357f2338d3337d2cdd4914bb5dcc865"
   dependencies:
@@ -4247,36 +4247,36 @@ levn@^0.4.1:
     prelude-ls "^1.2.1"
     type-check "~0.4.0"
 
-lilconfig@2.0.4:
-  version "2.0.4"
-  resolved "https://registry.npmjs.org/lilconfig/-/lilconfig-2.0.4.tgz"
+lilconfig@2.0.5:
+  version "2.0.5"
+  resolved "https://registry.yarnpkg.com/lilconfig/-/lilconfig-2.0.5.tgz#19e57fd06ccc3848fd1891655b5a447092225b25"
 
 lines-and-columns@^1.1.6:
   version "1.1.6"
   resolved "https://registry.npmjs.org/lines-and-columns/-/lines-and-columns-1.1.6.tgz"
 
-lint-staged@^12.4.1:
-  version "12.4.1"
-  resolved "https://registry.yarnpkg.com/lint-staged/-/lint-staged-12.4.1.tgz#63fa27bfc8a33515f6902f63f6670864f1fb233c"
+lint-staged@^12.5.0:
+  version "12.5.0"
+  resolved "https://registry.yarnpkg.com/lint-staged/-/lint-staged-12.5.0.tgz#d6925747480ae0e380d13988522f9dd8ef9126e3"
   dependencies:
     cli-truncate "^3.1.0"
     colorette "^2.0.16"
-    commander "^8.3.0"
-    debug "^4.3.3"
+    commander "^9.3.0"
+    debug "^4.3.4"
     execa "^5.1.1"
-    lilconfig "2.0.4"
-    listr2 "^4.0.1"
-    micromatch "^4.0.4"
+    lilconfig "2.0.5"
+    listr2 "^4.0.5"
+    micromatch "^4.0.5"
     normalize-path "^3.0.0"
-    object-inspect "^1.12.0"
+    object-inspect "^1.12.2"
     pidtree "^0.5.0"
     string-argv "^0.3.1"
-    supports-color "^9.2.1"
+    supports-color "^9.2.2"
     yaml "^1.10.2"
 
-listr2@^4.0.1:
+listr2@^4.0.5:
   version "4.0.5"
-  resolved "https://registry.npmjs.org/listr2/-/listr2-4.0.5.tgz"
+  resolved "https://registry.yarnpkg.com/listr2/-/listr2-4.0.5.tgz#9dcc50221583e8b4c71c43f9c7dfd0ef546b75d5"
   dependencies:
     cli-truncate "^2.1.0"
     colorette "^2.0.16"
@@ -4526,6 +4526,13 @@ micromatch@^4.0.4:
   dependencies:
     braces "^3.0.1"
     picomatch "^2.2.3"
+
+micromatch@^4.0.5:
+  version "4.0.5"
+  resolved "https://registry.yarnpkg.com/micromatch/-/micromatch-4.0.5.tgz#bc8999a7cbbf77cdc89f132f6e467051b49090c6"
+  dependencies:
+    braces "^3.0.2"
+    picomatch "^2.3.1"
 
 miller-rabin@^4.0.0:
   version "4.0.1"
@@ -4827,6 +4834,10 @@ object-copy@^0.1.0:
 object-inspect@^1.12.0, object-inspect@^1.9.0:
   version "1.12.0"
   resolved "https://registry.npmjs.org/object-inspect/-/object-inspect-1.12.0.tgz"
+
+object-inspect@^1.12.2:
+  version "1.12.2"
+  resolved "https://registry.yarnpkg.com/object-inspect/-/object-inspect-1.12.2.tgz#c0641f26394532f28ab8d796ab954e43c009a8ea"
 
 object-is@^1.0.1:
   version "1.1.5"
@@ -5149,6 +5160,10 @@ picocolors@^1.0.0:
 picomatch@^2.0.4, picomatch@^2.2.1, picomatch@^2.2.3, picomatch@^2.3.0:
   version "2.3.0"
   resolved "https://registry.npmjs.org/picomatch/-/picomatch-2.3.0.tgz"
+
+picomatch@^2.3.1:
+  version "2.3.1"
+  resolved "https://registry.yarnpkg.com/picomatch/-/picomatch-2.3.1.tgz#3ba3833733646d9d3e4995946c1365a67fb07a42"
 
 pidtree@^0.5.0:
   version "0.5.0"
@@ -6361,9 +6376,9 @@ supports-color@^8.0.0:
   dependencies:
     has-flag "^4.0.0"
 
-supports-color@^9.2.1:
+supports-color@^9.2.2:
   version "9.2.2"
-  resolved "https://registry.npmjs.org/supports-color/-/supports-color-9.2.2.tgz"
+  resolved "https://registry.yarnpkg.com/supports-color/-/supports-color-9.2.2.tgz#502acaf82f2b7ee78eb7c83dcac0f89694e5a7bb"
 
 supports-preserve-symlinks-flag@^1.0.0:
   version "1.0.0"
