@@ -5540,9 +5540,9 @@ react-player@^2.10.1:
     prop-types "^15.7.2"
     react-fast-compare "^3.0.1"
 
-react-range@^1.8.12:
-  version "1.8.12"
-  resolved "https://registry.npmjs.org/react-range/-/react-range-1.8.12.tgz"
+react-range@^1.8.14:
+  version "1.8.14"
+  resolved "https://registry.yarnpkg.com/react-range/-/react-range-1.8.14.tgz#11047f69b365ac6c75c3d715771ebe76b93982ec"
 
 react-refresh@0.8.3:
   version "0.8.3"
