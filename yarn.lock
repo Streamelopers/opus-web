@@ -6989,9 +6989,9 @@ yocto-queue@^0.1.0:
   version "0.1.0"
   resolved "https://registry.npmjs.org/yocto-queue/-/yocto-queue-0.1.0.tgz"
 
-yup-es@^1.0.3:
-  version "1.0.3"
-  resolved "https://registry.npmjs.org/yup-es/-/yup-es-1.0.3.tgz"
+yup-es@^1.0.8:
+  version "1.0.8"
+  resolved "https://registry.yarnpkg.com/yup-es/-/yup-es-1.0.8.tgz#a99c40e795d6f15c8c998538b61b4c7f59a0ec72"
 
 yup@^0.32.11:
   version "0.32.11"
