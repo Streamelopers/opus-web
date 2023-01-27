@@ -5466,9 +5466,9 @@ react-clientside-effect@^1.2.5:
   dependencies:
     "@babel/runtime" "^7.12.13"
 
-react-countdown@^2.3.2:
-  version "2.3.2"
-  resolved "https://registry.npmjs.org/react-countdown/-/react-countdown-2.3.2.tgz"
+react-countdown@^2.3.5:
+  version "2.3.5"
+  resolved "https://registry.yarnpkg.com/react-countdown/-/react-countdown-2.3.5.tgz#70c035b5cbc7e8fdb4ad91fe5f44afd7a7933a68"
   dependencies:
     prop-types "^15.7.2"
 
