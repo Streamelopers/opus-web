@@ -744,11 +744,17 @@
   dependencies:
     "@emotion/memoize" "0.7.4"
 
-"@emotion/is-prop-valid@^1.1.0", "@emotion/is-prop-valid@^1.1.2":
+"@emotion/is-prop-valid@^1.1.0":
   version "1.1.2"
   resolved "https://registry.npmjs.org/@emotion/is-prop-valid/-/is-prop-valid-1.1.2.tgz"
   dependencies:
     "@emotion/memoize" "^0.7.4"
+
+"@emotion/is-prop-valid@^1.2.0":
+  version "1.2.0"
+  resolved "https://registry.yarnpkg.com/@emotion/is-prop-valid/-/is-prop-valid-1.2.0.tgz#7f2d35c97891669f7e276eb71c83376a5dc44c83"
+  dependencies:
+    "@emotion/memoize" "^0.8.0"
 
 "@emotion/memoize@0.7.4":
   version "0.7.4"
@@ -815,15 +821,16 @@
   version "1.2.1"
   resolved "https://registry.yarnpkg.com/@emotion/sheet/-/sheet-1.2.1.tgz#0767e0305230e894897cadb6c8df2c51e61a6c2c"
 
-"@emotion/styled@^11.8.1":
-  version "11.8.1"
-  resolved "https://registry.npmjs.org/@emotion/styled/-/styled-11.8.1.tgz"
+"@emotion/styled@^11.10.5":
+  version "11.10.5"
+  resolved "https://registry.yarnpkg.com/@emotion/styled/-/styled-11.10.5.tgz#1fe7bf941b0909802cb826457e362444e7e96a79"
   dependencies:
-    "@babel/runtime" "^7.13.10"
-    "@emotion/babel-plugin" "^11.7.1"
-    "@emotion/is-prop-valid" "^1.1.2"
-    "@emotion/serialize" "^1.0.2"
-    "@emotion/utils" "^1.1.0"
+    "@babel/runtime" "^7.18.3"
+    "@emotion/babel-plugin" "^11.10.5"
+    "@emotion/is-prop-valid" "^1.2.0"
+    "@emotion/serialize" "^1.1.1"
+    "@emotion/use-insertion-effect-with-fallbacks" "^1.0.0"
+    "@emotion/utils" "^1.2.0"
 
 "@emotion/stylis@^0.8.4":
   version "0.8.5"
