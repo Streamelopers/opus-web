@@ -46,7 +46,7 @@
     "react-tilt": "^0.1.4",
     "sass": "^1.57.1",
     "slick-carousel": "^1.8.1",
-    "styled-components": "^5.3.5",
+    "styled-components": "^5.3.6",
     "styled-system": "^5.1.5",
     "yup": "^0.32.11",
     "yup-es": "^1.0.8"
