@@ -2446,7 +2446,7 @@ cosmiconfig@^7.0.0:
     path-type "^4.0.0"
     yaml "^1.10.0"
 
-countup.js@^2.3.2:
+countup.js@^2.4.1:
   version "2.4.1"
   resolved "https://registry.yarnpkg.com/countup.js/-/countup.js-2.4.1.tgz#50e8e8de62824ff0263a50436d414e312069e8bb"
 
@@ -5854,12 +5854,12 @@ react-countdown@^2.3.5:
   dependencies:
     prop-types "^15.7.2"
 
-react-countup@^6.4.0:
-  version "6.4.0"
-  resolved "https://registry.yarnpkg.com/react-countup/-/react-countup-6.4.0.tgz#f18d24e40c37c465b29353172cc8b3b5e82f3241"
+react-countup@^6.4.1:
+  version "6.4.1"
+  resolved "https://registry.yarnpkg.com/react-countup/-/react-countup-6.4.1.tgz#cbbda64a64065cb12376eff23e5aa084665e6c4d"
   dependencies:
     "@rollup/plugin-babel" "^6.0.2"
-    countup.js "^2.3.2"
+    countup.js "^2.4.1"
 
 react-day-picker@^8.0.5:
   version "8.0.5"
