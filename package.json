@@ -22,7 +22,7 @@
     "chakra-paginator": "^0.7.3",
     "dayjs": "^1.11.7",
     "framer-motion": "^6.5.1",
-    "google-map-react": "^2.1.10",
+    "google-map-react": "^2.2.0",
     "lodash": "^4.17.21",
     "next": "^11.1.4",
     "next-fonts": "^1.5.1",

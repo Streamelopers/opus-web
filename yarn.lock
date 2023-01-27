@@ -3580,9 +3580,9 @@ globby@^8.0.1:
     pify "^3.0.0"
     slash "^1.0.0"
 
-google-map-react@^2.1.10:
-  version "2.1.10"
-  resolved "https://registry.npmjs.org/google-map-react/-/google-map-react-2.1.10.tgz"
+google-map-react@^2.2.0:
+  version "2.2.0"
+  resolved "https://registry.yarnpkg.com/google-map-react/-/google-map-react-2.2.0.tgz#10b23a42526556adaacbaeec114a72bf3b733053"
   dependencies:
     "@googlemaps/js-api-loader" "^1.7.0"
     "@mapbox/point-geometry" "^0.1.0"
