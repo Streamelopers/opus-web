@@ -34,7 +34,7 @@
     "react-countup": "^6.4.1",
     "react-day-picker": "^8.5.1",
     "react-dom": "18.0.0",
-    "react-hook-form": "^7.43.0",
+    "react-hook-form": "^7.43.1",
     "react-icons": "^4.7.1",
     "react-lazyload": "^3.2.0",
     "react-player": "^2.11.0",
