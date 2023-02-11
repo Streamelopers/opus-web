@@ -5875,9 +5875,9 @@ raw-loader@^2.0.0:
     loader-utils "^1.1.0"
     schema-utils "^1.0.0"
 
-react-bootstrap@^2.7.0:
-  version "2.7.0"
-  resolved "https://registry.yarnpkg.com/react-bootstrap/-/react-bootstrap-2.7.0.tgz#4a8f0311bccac477dc925366763c536f46e4393b"
+react-bootstrap@^2.7.1:
+  version "2.7.1"
+  resolved "https://registry.yarnpkg.com/react-bootstrap/-/react-bootstrap-2.7.1.tgz#ecb245b06fd404700436e9a2ef9a998767225bf0"
   dependencies:
     "@babel/runtime" "^7.17.2"
     "@restart/hooks" "^0.4.6"
