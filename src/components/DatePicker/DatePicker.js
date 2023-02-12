@@ -19,11 +19,15 @@ const DatePickerStyled = styled.div`
   .DayPicker-Day--today {
     color: ${({ theme }) => theme.colors.primary};
   }
-  .DayPicker-Day--selected:not(.DayPicker-Day--disabled):not(.DayPicker-Day--outside) {
+  .DayPicker-Day--selected:not(.DayPicker-Day--disabled):not(
+      .DayPicker-Day--outside
+    ) {
     background-color: ${({ theme }) => theme.colors.primary};
     color: #fff;
   }
-  .DayPicker-Day--selected:not(.DayPicker-Day--disabled):not(.DayPicker-Day--outside):hover {
+  .DayPicker-Day--selected:not(.DayPicker-Day--disabled):not(
+      .DayPicker-Day--outside
+    ):hover {
     background-color: ${({ theme }) => theme.colors.primary};
   }
 `;
